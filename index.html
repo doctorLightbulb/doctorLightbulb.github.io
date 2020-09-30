@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Invitation to Learn Code</title>
+        <style>
+            .header {
+                background: blue;
+                color: white;
+                text-align: center;
+                text-shadow: 0px 2px 4px black;
+                font-weight: bold;
+                font-family: sans-serif;
+                line-height: 1.25em;
+                padding-top: 2em;
+                padding-bottom: 2em;
+                border-top: 0.5em solid rgb(56, 56, 56);
+                border-bottom: 0.5em solid rgb(56, 56, 56);
+                box-shadow: 0px 2px 4px black;
+            }
+            .footer {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                text-shadow: 0px 2px 4px black;
+                background: blue;
+                padding-top: 1em;
+                padding-bottom: 3em;
+                border-top: 1em solid rgb(56, 56, 56);
+                border-bottom: 1em solid rgb(56, 56, 56); 
+                clear: both;
+            }
+            .italics {
+                font-style: italic;
+            }
+            .winston {
+                width: 50px;
+            }
+            .oh-noes {
+                width: 50px;
+            }
+            .cool-hopper {
+                width: 50px;
+            }
+            h2 {
+                line-height: 2em;
+                padding-top: 1em;
+            }
+            a:hover {
+                color:darkgray;
+            }
+            body {
+                opacity: 100%;
+                animation-name: header;
+                animation-duration: 4s;
+                animation-timing-function: ease-out;
+            }
+            @keyframes header {
+                0% {opacity: 0%}
+                100% {opacity: 100%;}
+            }
+            /*Phone screen size*/
+            @media screen and (min-width: 400px) {
+                body {
+                    background-color: lavender;
+                }
+                .page {
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-right: 2em;
+                    margin-left: 2em;
+                }
+                .subheaders {
+                    margin-top: 2em;
+                    border-top: 0.25em dotted gray;
+                }
+                .body {
+                    margin-right: 0em;
+                    margin-left: 0em;
+                }
+                .lists {
+                font-family: Arial, Helvetica, sans-serif;
+                float: right;
+                width: fit-content;
+                margin-top: 3em;
+                margin-right: 0.5em;
+                padding-left: 1em;
+                padding-top: 0px;
+                }
+                .second-list {
+                    padding-top: 0em;
+                }
+                .third-list {
+                    padding-top: 13em;
+                }
+            }
+            /*tablet screen size*/
+            @media screen and (min-width: 475px) {
+                body {
+                    background-color: lavender;
+                }
+                .page {
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-right: 2em;
+                    margin-left: 2em;
+                }
+                .subheaders {
+                    margin-top: 2em;
+                    border-top: 0.25em dotted gray;
+                }
+                .body {
+                    margin-right: 0em;
+                    margin-left: 0em;
+                }
+                .lists {
+                font-family: Arial, Helvetica, sans-serif;
+                float: right;
+                width: fit-content;
+                margin-top: 3em;
+                margin-right: 0.5em;
+                padding-left: 1em;
+                padding-top: 0px;
+                }
+                .second-list {
+                    padding-top: 6em;
+                }
+                .third-list {
+                    padding-top: 2em;
+                }
+            }
+            /*Desktop screen size*/
+            @media screen and (min-width: 800px) {
+                body {
+                    background-color: lavender;
+                }
+                .page {
+                    margin-right: 2em;
+                    margin-left: 2em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1 class="header">You Are Invited to Become Part of the Greatest Guild Ever!</h1>
+        <div class="lists">
+            <h3>Places for Coders</h3>
+            <ul>
+                <li><a href="https://www.apple.com/jobs/us/">Apple</a></li>
+                <li><a href="https://careers.microsoft.com/us/en">Microsoft</a></li>
+                <li><a href="https://careers.google.com/">Google</a></li>
+                <li><a href="https://blog.aboutamazon.com/operations/a-tech-job-without-college">Amazon</a></li>
+                <li><a href="https://careers.walmart.com/">Walmart</a></li>
+                <li><a href="https://www.verizon.com/about/careers/cybersecurity">Verizon</a></li>
+            </ul>   
+            <h3 class="second-list">Places to Start</h3>
+            <ul>
+                <li><a href="https://www.khanacademy.org/hourofcode">Khan Academy</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Mozilla Developer</a></li>
+            </ul>
+            <h3 class="lists, third-list">Coder Resources</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer</a></li>
+                <li><a href="https://developer.apple.com/programs/">Apple Developer</a></li>
+            </ul>
+        </div>
+        <div class="page"></div>
+            <div class="body">
+                <h2 class="subheaders">Discover Your Talents!</h2>
+                <p>Have you ever considered a challenging, exciting career? Perhaps you investigated retail, engineering or even law. Have you ever thought of computer programming?</p>
+                <p>There are many positions available for coders. From designing operating systems to medical platforms, the coder is needed!</p>
+                <h2 class="subheaders">Expand Your Abilities!</h2>
+                <p>Where do you start? Here are some simple ways to begin: First, <em>decide</em> what you would like. Second, <em>learn</em> what you can do (<span class="italics">and how do you know what you can do until you try it?)</span>.</p>
+                <p><span class="italics">Practice makes perfect</span>! So where do you practice? To the right are a few places, in order of recommendation. It is an incomplete list, but enough to give you a good start. From there, you can progress to directly reading documentation at such places as you see on the right. The adventure is yours! Give it a try! You never know what might happen! Good luck!</p>
+            </div>
+        <div class="footer">
+            <h3>We'll be more than happy to have you!</h3>    
+            <h3>Follow us on:</h3>
+            <img class="oh-noes" src="https://www.kasandbox.org/programming-images/creatures/OhNoes.png" alt="Unhappy OhNoes">
+            <img class="winston" src="https://www.kasandbox.org/programming-images/creatures/Winston.png" alt="Winston">
+            <img class="cool-hopper" src="https://www.kasandbox.org/programming-images/creatures/Hopper-Cool.png" alt="Cool Hopper">              
+        </div>
+    </body>
+</html>
