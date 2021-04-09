@@ -1,0 +1,174 @@
+/* The website's header.  */
+.header {
+    background: url("Images/vest-texture.png") repeat center/100% 300%;
+    background-color:rgb(177, 55, 82);
+    background-position: center;
+    height: fit-content;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 0.5em solid rgba(255, 255, 255); 
+    box-shadow: 0px 2px 4px black;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    position: fixed;
+    overflow: auto;
+}
+.go-rilla-button {
+    background: url("Images/vest-texture.png") repeat center/100% 300%;
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+    top: 0.5em;
+    height: 55px;
+    width: 55px;
+    margin-bottom: 1.5em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.go-rilla-button:hover {
+    opacity: 0.7;
+}
+.go-rilla-button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 115%;
+    padding-left: 115%;
+    margin-left: -10px !important;
+    margin-top: -60%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.go-rilla-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.go-rilla-logo {
+    position: absolute;
+    left: 0.2em;
+    top: 0.0em;
+    height: 50px;
+    width: 50px;
+}
+.magnifying-glass {
+    position: absolute;
+    left: 35%;
+    top: -0.25em;
+    width: 70px;
+}
+#first-line {
+    position: center;
+    top: 1em;
+    left:-1.25em;
+    font-size: medium;
+}
+/* The menu.  */
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    top: 0.75em;
+    z-index: 3;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    opacity: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 2px 4px black;
+    padding: 12px, 16px;
+    z-index: 3;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdownBtn {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background: url("Images/vest-texture.png") repeat center/100% 300%;
+    color: white;
+}
+.dropdown:hover .dropdownBtn {
+    color:  white;
+    opacity: 0.9;
+}
+/* The website's footer */
+.footer {
+    background: url("Images/vest-texture.png") repeat center/100% 200%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 0.5em solid rgb(255, 255, 255);
+    border-bottom: 0.5em solid rgba(255, 255, 255); 
+    box-shadow: 0px 2px 4px black;
+    clear: both;
+    width: 100%;
+}
+.go-rilla-logo-footer {
+    position: relative;
+    left: 0%;
+    top: 1em;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 1em;
+}
+/* Additional Details */
+.italics {
+    font-style: italic;
+}
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2em;
+    padding-top: 1em;
+    margin-left: 1.25em;
+}
+p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-bottom: 1em;
+}
+h5 {
+    line-height: 0.25em;
+}
+a:hover {
+    color:rgb(172, 43, 144);
+    transition-duration: 0.4s;
+}
+body {
+    opacity: 100%;
+    animation-name: header;
+    animation-duration: 2s;
+    animation-timing-function:ease-out;
+    margin: 0;
+}
+.body2 {
+    background-color:  white;;
+    box-shadow: 0px 2px 4px black;
+}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="icon" href="Images/website-icon.png" type="image/png" sizes="16x16">
+    <!-- <link rel="stylesheet" type="text/css" href="header-and-footer.css" -->
+    <meta charset="utf-8">
+    <title>Joshua Nolan</title>
+    <style>
+        #joshuasblog {
+            background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png") no-repeat center/100% 200%;
+            color: white;
+            text-shadow: 3px 3px rgb(0, 0, 0);
+            box-shadow: 2px 2px 4px black;
+            font-family: 'Olde English', 'Edwardian Script ITC', cursive;
+            line-height: 100px;
+            font-size: 4em;
+            font-weight: bold;
+            text-align: center;
+            border: 5px double rgb(255, 255, 255);
+            position: relative;
+            width: 100%;
+        }
+
+        #profile-picture {
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 5em;
+            background: url(Images/Joshua.JPG);
+            border-radius: 50%;
+            border: 2px double white;
+            z-index: 3;
+        }
+
+        .notice-banner {
+            max-width:max-content;
+            text-align: center;
+            color:white;
+            background-color:brown;
+            font-style:italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px 20px 10px 20px;
+        }
+
+        .heading {
+            background-color: lightblue;
+            background-position: center;
+            color: white;
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: 'Olde English', 'Times New Roman', Times, serif;
+            line-height: 1em;
+            margin-top: 0em;
+            padding-top: 2.5em;
+            padding-bottom: 2em;
+            border-bottom: 0.25em solid rgba(255, 255, 255);
+            box-shadow: 0px 2px 4px black;
+        }
+
+        .navigation-bar {
+            position: sticky;
+            top: 0;
+            background-color: lightblue;
+            list-style-type: none;
+            text-align: center;
+            color: black;
+            margin: 1em 0em 1em 0em;
+            padding: 0;
+            border: 5px double white;
+            box-shadow: 0px 2px 4px black;
+            z-index: 10;
+        }
+
+        .navigation-bar li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+            transition-duration: 0.1s;
+        }
+
+        .dropdown {
+            position: fixed;
+            display: inline-block;
+            top: 0.75em;
+            z-index: 3;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            opacity: 100%;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 2px 4px black;
+            padding: 12px, 16px;
+            z-index: 3;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdownBtn {
+            background-color: rgba(255, 255, 255, 0);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        .dropdown:hover .dropdownBtn {
+            color: white;
+            opacity: 1;
+        }
+
+        #slogan {
+            font-family:'Times New Roman', Times, serif;
+            font-style: italic;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .header-content {
+            background-color: lightblue;
+            position: relative;
+            width: auto;
+            color: black;
+            height: fit-content;
+            text-align: left;
+            font-size: x-large;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5em;
+            margin-top: 1em;
+            padding-top: 1.25em;
+            padding-bottom: 1.25em;
+            padding-right: 1em;
+            padding-left: 1em;
+            border: 5px double rgb(255, 255, 255);
+            box-shadow: 0px 2px 4px black;
+        }
+
+        .main-container {
+            z-index: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-content {
+            background-color: lightblue;
+            position: relative;
+            width: auto;
+            color: black;
+            height: fit-content;
+            text-align: left;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5em;
+            margin-top: 1em;
+            padding-top: 2.5em;
+            padding-bottom: 2em;
+            padding-right: 3em;
+            padding-left: 3em;
+            border: 5px double rgb(255, 255, 255);
+            box-shadow: 0px 2px 4px black;
+        }
+
+        .side-bar {
+            position:relative;
+            background-color: rgb(73, 85, 255);
+            float: right;
+            width: 20%;
+            color: white;
+            height: fit-content;
+            text-align: left;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.1em;
+            margin-top: 0em;
+            padding: 2em 2em;
+            border: 5px dotted white;
+            box-shadow: 0px 2px 4px black;
+            z-index: 1;
+        }
+
+        .novel-title {
+            padding: 5px;
+            margin: 0;
+            text-align: center;
+            font-style: italic;
+            line-height: 16px;
+            width: 100px;
+        }
+        .caption {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .left-image {
+            position: auto;
+            float: left;
+        }
+        .footer {
+            background-color: lightblue;
+            background-position: center;
+            color: white;
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+            line-height: 1em;
+            margin-top: 5em;
+            padding-top: 5em;
+            padding-bottom: 2em;
+            border: 5px double rgb(255, 255, 255);
+            box-shadow: 0px 2px 4px black;
+            clear: both;
+        }
+
+        /* @keyframes header {
+                0% {opacity: 0%}
+                100% {opacity: 100%;}
+            } */
+        /*Phone screen size*/
+        @media screen and (min-width: 400px) {
+            body {
+                background-color: lightgray;
+            }
+
+            .page {
+                font-family: Arial, Helvetica, sans-serif;
+                margin-right: 2em;
+                margin-left: 2em;
+            }
+
+            .subheaders {
+                margin-top: 2em;
+                border-top: 0.25em dotted gray;
+            }
+
+            .body {
+                margin-right: 0em;
+                margin-left: 0em;
+            }
+
+            .lists {
+                font-family: Arial, Helvetica, sans-serif;
+                float: right;
+                width: fit-content;
+                margin-top: 3em;
+                margin-right: 0.5em;
+                padding-left: 1em;
+                padding-top: 0px;
+            }
+
+            .second-list {
+                padding-top: 0em;
+            }
+
+            .third-list {
+                padding-top: 13em;
+            }
+        }
+
+        /*tablet screen size*/
+        @media screen and (min-width: 475px) {
+            body {
+                background-color: lavender;
+            }
+
+            .page {
+                font-family: Arial, Helvetica, sans-serif;
+                margin-right: 2em;
+                margin-left: 2em;
+            }
+
+            .subheaders {
+                margin-top: 2em;
+                border-top: 0.25em dotted gray;
+            }
+
+            .body {
+                margin-right: 0em;
+                margin-left: 0em;
+            }
+
+            .lists {
+                font-family: Arial, Helvetica, sans-serif;
+                float: right;
+                width: fit-content;
+                margin-top: 3em;
+                margin-right: 0.5em;
+                padding-left: 1em;
+                padding-top: 0px;
+            }
+
+            .second-list {
+                padding-top: 6em;
+            }
+
+            .third-list {
+                padding-top: 2em;
+            }
+        }
+
+        /*Desktop screen size*/
+        @media screen and (min-width: 800px) {
+            body {
+                background-color: lavender;
+            }
+
+            .page {
+                margin-right: 2em;
+                margin-left: 2em;
+            }
+        }
+
+        @keyframes header {
+                0% {opacity: 0%}
+                100% {opacity: 100%;}
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The Notice Banner -->
+    <div class="notice-banner">
+        <p>Note: This website does not offer sales of any kind. Its sole purpose is to serve as a virtual catalog, showing where my books are available for sale. </p>
+    </div>
+    <!-- The Heading -->
+    <div id="joshuasblog">
+        <div>
+            <h1>Welcome!</h1>
+        </div>
+    </div>
+    <!-- The Navigation Menu. -->
+    <div class="navigation-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy and Cookies</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+    <div class="header-content">
+        <img id="profile-picture" src="Images/author-portrait.png" width="100" alt="A portrait of Joshua Nolan in front of a drawn waterfall.">
+        <div id="slogan">
+            In honor, frame thy craft.<br>
+            Compose thy work in glory.<br>
+            Prepare thyself for heights above;<br>
+            Then write a worthwhile story.
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="side-bar">
+            <h2><em><strong>COMING SOON!</strong></em></h2>
+            <div class="left-image">
+                <img src="Images/a-tale-to-tell.JPG" width="100" alt="The cover for A Tale to Tell: The Quest for the Lost City. It is a picture of a brown, worn book set upon a gray stone table illuminated by a brightly burning candle.">
+                <h6 class="novel-title">A Tale to Tell: The Quest for the Lost City</h6>
+            </div>
+            <h5>After a feast, the King suddenly calls a small group of his loyal servants to embark on a long-abandoned quest<—the search for the legendary Golden City located in the Forbidden Wilds. Follow Robert, a member of the band, as the adventure unfolds!</h5>
+            <div class="left-image">
+                <img src="Images/hannah-alberts-the-road-to-zion.jpg" width="100" alt="The cover for Hannah Alberts: The Road to Zion. It is a picture of a girl with her hand behind her head, looking toward slightly toward us, silhouetted by a glorious sunset.">
+                <h6 class="novel-title">Hannah Alberts: The Road to Zion</h6>
+            </div>
+            <h5>It is 1850. Hannah and her father are on the long trail to the Salt Lake Valley</h5>
+        </div>
+        <div class="main-content">
+            <h2>New Arrival</h2>
+            <p>This field is for the latest book for sale, stating its name, description and whereabouts. A link Read
+                More, will be displayed at the bottom, and it will take the client to the full article for that book.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="footer">
+        <h4>The Footer</h4>
+    </div>
+</body>
+
+</html>
