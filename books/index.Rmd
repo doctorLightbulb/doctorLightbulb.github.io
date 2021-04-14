@@ -1,0 +1,12 @@
+---
+title: "Books"
+author: "Joshua Nolan"
+date: "4/14/2021"
+output: html_document
+---
+
+# Collections  
+
+Here, Alfred Cutler: The Backwoods Boy will be displayed on a card. Once clicked, the card will take the user to the appropriate HTML file. 
+
+Other stories will be added here, as well. In addition to a description of each story, there will be a *HISTORY* tab, describing any background information which the reader may find interesting.

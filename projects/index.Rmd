@@ -1,0 +1,10 @@
+---
+title: "Projects"
+author: "Joshua Nolan"
+date: "4/12/2021"
+output: html_document
+---
+
+# Welcome to My Projects Page!
+
+As new projects are created, details will be posted here. So check back soon!
