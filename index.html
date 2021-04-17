@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <!-- <link rel="icon" href="Images/go-rilla-logo-button.png" type="image/png" sizes="16x16"> -->
+    <link rel="icon" href="Images/quill-pen-favicon.png" type="image/png" sizes="64x64">
     <title>Joshua Nolan's Main Project Site</title>
     <style>
         .changing-display {
@@ -29,8 +29,10 @@
         }
 
         .quill-pen {
+            max-width: 100%;
+            width: 4%;
             position: absolute;
-            bottom: -0px;
+            bottom: -1px;
             left: 10px;
             transition: 0.2s;
             display: block;
@@ -50,9 +52,9 @@
             padding: 10px;
         }
 
-        /* .row {
+        .row {
             margin: 0 -5px;
-        } */
+        }
 
         .row:after {
             content: "";
@@ -103,29 +105,18 @@
             transform: scale(1.05);
         }
 
-        .container {
-            padding-right: 8em;
-            padding-left: 8em;
-            padding-bottom: 2em;
-            padding-top: 2em;
-            background-color: whitesmoke;
-            color: darkgray;
-            margin: 0px;
-            width: 10%;
-        }
-
         * {
             box-sizing: border-box;
         }
 
-        .mcontainer {
+        .text-container {
             background-color: whitesmoke;
             margin-right: auto;
             margin-left: auto;
         }
 
         .heading {
-            color: lightsteelblue;
+            color: rgb(144, 161, 184);
             padding-right: 20%;
             padding-left: 20%;
         }
@@ -171,8 +162,14 @@
             padding-right: 10%;
         }
 
-        a:link {
+        a {
+            color: rgb(95, 95, 146);
             text-decoration: none;
+        }
+
+        h5 {
+            color: rgb(95, 95, 146);
+            text-align: center;
         }
 
         a:hover {
@@ -181,14 +178,14 @@
         }
 
         a:active {
-            background-color: gold;
+            background-color: white;
         }
 
         @media only screen and (max-width: 600px) {
 
             .column {
                 width: 100%;
-                display: both;
+                display: block;
                 margin-bottom: 20px;
             }
 
@@ -223,7 +220,7 @@
 <body>
     <div class="changing-display"></div>
     <div class="nav-bar">
-        <img class="quill-pen" src="Images/quill-pen.png" width="50" alt="A quill pen in an ink well">
+        <img class="quill-pen" src="Images/quill-pen.png" alt="A quill pen in an ink well">
     </div>
     <div class="heading">
         <h1>Welcome!</h1>
@@ -231,11 +228,11 @@
             This is the main jroject website for Joshua Nolan, an author and programmer.
         </p>
     </div>
-    <div class="mcontainer">
+    <div class="text-container">
         <div class="row">
             <div class="column">
                 <div class="card"><a href="books/index.html">
-                        <img class="centered" src=" Images/open-book.PNG" alt="An open book">
+                        <img class="centered" src="Images/open-book.PNG" alt="An open book">
                         <h2>BOOKS</h2>
                     </a></div>
             </div>
@@ -251,14 +248,16 @@
         <br>
         <img class="centered-small" src="Images/quill-pen.png" width="50" alt="A quill pen in an ink well">
         <br>
-        <hr>
         <div class="sub-footer">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Privacy</a></li>
                 <li><a href="#">Help</a></li>
             </ul>
         </div>
+        <hr>
+        <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
+        <br>
     </div>
 </body>
 
