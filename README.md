@@ -1,2 +1,2 @@
 # doctorLightbulb.github.io
-This is the foundation for a social media webpage to be expanded into a website, in time.
+*This is a small website for the purpose of showcasing my published and upcoming books, as well as  any coding projects I may make.*
