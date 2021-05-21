@@ -39,19 +39,28 @@
 #search-box {
     position: absolute;
     right: 20px;
-    bottom: 5px;
+    top: 2px;
     color: gray;
     float: right;
     display: inline;
     width: 20%;
     margin-right: 2%;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 2px;
     background-color: whitesmoke;
     border: solid 1px gray;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    padding: 3px;
+    width: 100%;
+    outline: none;
+    
+}
+input[type=text]:focus {
+    color:whitesmoke;
+    background-color:rgb(144, 161, 184);
 }
 form.search-container {
     width: 15%;
