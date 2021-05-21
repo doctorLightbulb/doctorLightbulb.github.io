@@ -4,276 +4,102 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <!-- <link rel="icon" href="Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512"> -->
+    <link rel="stylesheet" href="./layout.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7694bb">
+    <link rel="icon" href="Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512"> -->
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#b0c4de">
-    <title>Joshua Nolan's Main Project Site</title>
-    <style>
-        .changing-display {
-            background-color: darkslategray;
-            background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png") no-repeat center/100% 200%;
-            color: white;
-            height: 200px;
-        }
-
-        .nav-bar {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            min-width: auto;
-            background-color: lightsteelblue;
-            border-top: solid 4px;
-            border-bottom: solid 4px;
-            border-color: white;
-            color: white;
-            height: 50px;
-            box-shadow: 0px 2px 4px black;
-        }
-
-        .quill-pen {
-            max-width: 100%;
-            width: 4%;
-            position: absolute;
-            bottom: -1px;
-            left: 10px;
-            transition: 0.2s;
-            display: block;
-            background-color: lightyellow;
-            border-radius: 50%;
-            box-shadow: 0px 2px 4px black;
-        }
-
-        .quill-pen:hover {
-            opacity: 75%;
-        }
-
-        .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-        }
-
-        .row {
-            margin: 0 -5px;
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .centered {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-
-        .centered-small {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
-            width: 15%;
-            background-color: lightyellow;
-            border-radius: 50%;
-            box-shadow: 0px 2px 4px black;
-        }
-
-        .card {
-            position: relative;
-            max-width: 55%;
-            max-height: 55%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            font-size: x-large;
-            background-color: white;
-            border-style: solid;
-            border: 4px solid lightsteelblue;
-            border-radius: 10%;
-            padding-left: 50px;
-            padding-right: 50px;
-            padding-bottom: 10px;
-            padding-top: 90px;
-            box-shadow: 0px 2px 4px black;
-            z-index: 1;
-            transition: 0.2s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .text-container {
-            background-color: whitesmoke;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        .heading {
-            color: rgb(144, 161, 184);
-            padding-right: 20%;
-            padding-left: 20%;
-        }
-
-        body {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            background-color: whitesmoke;
-        }
-
-        .footer {
-            text-align: center;
-            width: 100%;
-            height: fit-content;
-            background-color: lightsteelblue;
-            border-top: solid 4px white;
-        }
-
-
-        .sub-footer {
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0;
-            max-width: 100%;
-            color: whitesmoke;
-        }
-
-        ul {
-            text-align: center;
-            list-style-type: none;
-            margin: 0;
-            padding-left: 20%;
-            padding-right: 20%;
-            padding-top: 1%;
-            padding-bottom: 1%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        li {
-            display: inline;
-            padding-left: 10%;
-            padding-right: 10%;
-        }
-
-        a {
-            color: rgb(95, 95, 146);
-            text-decoration: none;
-        }
-
-        h5 {
-            color: rgb(95, 95, 146);
-            text-align: center;
-        }
-
-        a:hover {
-            color: yellow;
-            text-decoration: underline;
-        }
-
-        a:active {
-            background-color: white;
-        }
-
-        @media only screen and (max-width: 600px) {
-
-            .column {
-                width: 100%;
-                display: block;
-                margin-bottom: 20px;
-            }
-
-            .card {
-                max-width: 75%;
-                max-height: 75%;
-            }
-
-            .centered-small {
-                width: 30%;
-            }
-
-            li {
-                display: block;
-                padding-top: 5%;
-            }
-
-            .quill-pen {
-                width: 11%;
-            }
-
-        }
-
-        @media only screen and (min-width: 600px) {
-            .column {
-                max-width: 100%;
-                display: block;
-                margin-bottom: 20px;
-                /* background-color: blue; */
-            }
-        }
-    </style>
-
+    <title>Joshua Nolan's Project Site</title>
 </head>
 
 <body>
-    <div class="changing-display"></div>
+    <div id="changing-display"></div>
     <div class="nav-bar">
         <img class="quill-pen" src="Images/quill-pen.png" alt="A quill pen in an ink well">
-    </div>
-    <div class="heading">
-        <h1>Welcome!</h1>
-        <p>
-            This is the main jroject website for Joshua Nolan, an author and programmer.
-        </p>
-    </div>
-    <div class="text-container">
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <a href="books/index.html">
-                        <img class="centered" src="Images/open-book.PNG" alt="An open book.">
+        <div class="nav-options">
+            <a class="nav-list-items active-page" href="index.html">Home</a>
+            <a class="nav-list-items" href="./books/index.html">Books</a>
+            <a class="nav-list-items" href="./projects/index.html">Projects</a>
+            <a class="nav-list-items" href="./about/index.html">About</a>
+            <!-- <a class="nav-list-items" href="index.html">News</a> -->
+            <!-- <div class="search-container">
+            <form action="/action_page.php" class="example">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> -->
+        </div>
+        <div class="heading">
+            <h1>Welcome!</h1>
+            <p>
+                This is the main project website for Joshua Nolan, an author and programmer.
+            </p>
+        </div>
+        <div class="text-container">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <a href="books/index.html">
+                            <img class="centered" src="Images/open-book.PNG" alt="An open book.">
+                        </a>
                         <h2>BOOKS</h2>
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <a href="projects/index.html">
-                        <img class="centered" src="Images/hammer-and-wrench.png" alt="A crossed hammer and wrench.">
+                <div class="column">
+                    <div class="card">
+                        <a href="projects/index.html">
+                            <img class="centered" src="Images/hammer-and-wrench.png" alt="A crossed hammer and wrench.">
+                        </a>
                         <h2>PROJECTS</h2>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <br>
-        <img class="centered-small" src="Images/quill-pen.png" width="50" alt="A quill pen in an ink well">
-        <br>
-        <div class="sub-footer">
-            <ul>
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+        <div class="footer">
+            <br>
+            <div class="tooltip">
+                <span class="tooltiptext">Return to top.</span>
+                <a href="#changing-display"> <img class="footer-quill-pen" src="Images/quill-pen.png" width="50"
+                        alt="A quill pen in an ink well">
+                </a>
+            </div>
+            <br>
+            <div class="sub-footer">
+                <ul>
+                    <li class="centered-list" id="cookies">
+                        <button type="button" class="foot-button"
+                            onclick="document.getElementsByClassName('pop-up-screen').style.display='block'">
+                            <a href="#">Cookies</a>
+                        </button>
+                    </li>
+                    <li class="centered-list" id="privacy">
+                        <button type="button" class="foot-button"
+                            onclick="document.getElementsByClass('pop-up-screen').style.display='block'">
+                            <a href="#">Privacy</a>
+                        </button>
+                    </li>
+                    <li class="centered-list" id="help"><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="pop-up-screen">
+                <span class="close-button">&times;</span>
+                <div class="pop-up-screen-caption">
+                    Good news! This site has no cookies as yet!When it
+                    does, the option you selected willtake you to a comprehensive
+                    description ofwhat information is stored for statisticaland
+                    operational purposes.
+                </div>
+            </div>
+
+            <hr>
+            <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
+            <br>
         </div>
-        <hr>
-        <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
-        <br>
-    </div>
+        <script src="javaScript-files/code.js"></script>
 </body>
 
 </html>

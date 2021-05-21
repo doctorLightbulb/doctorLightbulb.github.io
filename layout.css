@@ -1,0 +1,439 @@
+/* This file contains everything to do with styling the webiste. */
+#changing-display {
+    background-color: darkslategray;
+    background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png") no-repeat center/100% 200%;
+    color: white;
+    height: 400px;
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-width: auto;
+    background-color: lightsteelblue;
+    border-top: solid 4px;
+    border-bottom: solid 4px;
+    border-color: white;
+    color: whitesmoke;
+    height: 50px;
+    box-shadow: 0px 2px 4px black;
+}
+
+.nav-options {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0%;
+    padding-top: 1%;
+    /* padding-bottom: 1%; */
+}
+
+.nav-list-items {
+    text-align: left;
+    display: inline;
+    margin-left: 6%;
+    padding: 5px;
+}
+
+#search-box {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    color: gray;
+    float: right;
+    display: inline;
+    width: 20%;
+    margin-right: 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: whitesmoke;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+form.search-container {
+    width: 15%;
+}
+
+.search {
+    width: 20px;
+    color:rgb(144, 161, 184);
+}
+
+/* from w3schools */
+
+.nav-bar .search-container {
+    float: right;
+}
+
+.nav-bar .search-container input[type=text] {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: snow;
+}
+
+.nav-bar .search-container button {
+    float: right;
+    width: 10%;
+    padding: 5px;
+    margin-right: 20px;
+    background: lightgray;
+    color: gray;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+.nav-bar .search-container button:hover {
+    background: rgb(95, 95, 146);
+    color: snow;
+}
+
+.nav-bar input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* end of material from w3schools */
+
+.quill-pen {
+    max-width: 100%;
+    width: 4%;
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    transition: 0.2s;
+    display: block;
+    background-color: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+}
+
+.quill-pen:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.centered-small {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 15%;
+    background-color: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+}
+
+.footer-quill-pen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    transition: 0.2s;
+    width: 15%;
+    background-color: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+}
+
+.footer-quill-pen:hover {
+    opacity: 0.9;
+}
+
+.card {
+    position: relative;
+    color: rgb(95, 95, 146);
+    max-width: 55%;
+    max-height: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: x-large;
+    background-color: white;
+    border-style: solid;
+    border: 4px solid lightsteelblue;
+    border-radius: 10%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 90px;
+    box-shadow: 0px 2px 4px black;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.text-container {
+    background-color: whitesmoke;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading {
+    color: rgb(144, 161, 184);
+    padding-top: 20px;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.caption {
+    font-size: 15px;
+    font-style: italic;
+    padding-top: 3px;
+    border-top: solid 1px rgb(144, 161, 184);
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: 0.5s;
+    width: 120px;
+    background-color: rgb(144, 161, 184);
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px 0;
+    left: 50%;
+    bottom: 100%;
+    margin-left: -60px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 100%;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    background-color: lightsteelblue;
+    border-top: solid 4px white;
+}
+
+.sub-footer {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    text-align: center;
+    max-width: 100%;
+    color: whitesmoke;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-list {
+    display: inline;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.centered-list .foot-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+a.nav-list-items {
+    color: whitesmoke;
+}
+
+a.active-page {
+    background-color:rgb(144, 161, 184);
+    box-shadow: 0px 2px 4px black;
+    padding: 5px;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+}
+
+a:active {
+    background-color: whitesmoke;
+}
+
+a.footer {
+    color: rgb(95, 95, 146);
+    text-decoration: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: yellow;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: underline;
+    background-color:rgb(144, 161, 184);
+    box-shadow: 0px 2px 4px black;
+    padding: 5px;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+}
+
+.ffooter a:hover {
+    color: yellow;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+h5 {
+    color: rgb(95, 95, 146);
+    text-align: center;
+}
+
+.pop-up-screen {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(144, 161, 184);
+    background-color: rgba(144, 161, 184, 0.9);
+}
+
+.pop-up-screen-caption {
+    margin: auto;
+    display: block;
+    max-width: 700px;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px 0;
+    height: auto;
+}
+
+.pop-up-screen-caption {
+    animation-name: zoom-in;
+    animation-duration: 0.25s;    
+}
+
+@keyframes zoom-in {
+    from {transition: scale(0.1)}
+    to {transition: scale(1)}
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color:rgb(95, 95, 146);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close-button:hover {
+    opacity: 0.9;
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        max-width: 75%;
+        max-height: 75%;
+    }
+
+    .centered-small {
+        width: 30%;
+    }
+
+    .centered-list {
+        display: block;
+        padding-top: 5%;
+    }
+
+    .quill-pen {
+        width: 11%;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .column {
+        max-width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        /* background-color: blue; */
+    }
+}
