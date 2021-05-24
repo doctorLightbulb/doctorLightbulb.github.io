@@ -1,11 +1,14 @@
 var popUpScreen = document.getElementsByClassName("pop-up-screen")
 var privacyButton = document.getElementById("privacy")
 
-privacyButton = function () {
-    popUpScreen.style.display = "block";
+privacyButton.onclick = function () {
+    if (privacyButton === ispressed()) {
+        popUpScreen.style.display = "block";
+
+    }
 }
 
 var span = document.getElementsByClassName("close-button")[0];
-span = function () {
+span.onclick = function () {
     popUpScreen.style.display = "none";
 }

@@ -4,50 +4,69 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#b0c4de">
     <link rel="stylesheet" href="../layout.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
     <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#7694bb">
-    <link rel="icon" href="../Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512"> -->
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#b0c4de">
+    <link rel="icon" href="../Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512">
     <title>About</title>
 </head>
 
 <body>
     <div class="nav-bar">
         <img class="quill-pen" src="../Images/quill-pen.png" alt="A quill pen in an ink well">
-        <div class="nav-options">
-            <a class="nav-list-items" href="../index.html">Home</a>
-            <a class="nav-list-items" href="../books/index.html">Books</a>
-            <a class="nav-list-items " href="./projects/index.html">Projects</a>
-            <a class="nav-list-items active-page" href="./about/">About</a>
-            <!-- <a class="nav-list-items" href="index.html">News</a> -->
-        </div>
-        <div class="heading">
-            <h1 style="text-align: center;">ABOUT</h1>
-            <p>
-                This is the main project website for Joshua Nolan, an author and programmer.
-            </p>
-        </div>
-
-        <div class="footer">
-            <br>
-            <img class="centered-small" src="../Images/quill-pen.png" width="50" alt="A quill pen in an ink well">
-            <br>
-            <div class="sub-footer">
-                <ul>
-                    <li class='centered-list'><a href="#">Cookies</a></li>
-                    <li class='centered-list'><a href="#">Privacy</a></li>
-                    <li class='centered-list'><a href="#">Help</a></li>
-                </ul>
+        <a href="../index.html">Home</a>
+        <a href="../books/index.html">Books</a>
+        <a href="../projects/index.html">Projects</a>
+        <a class="active-page" href="./about/">About</a>
+        <!-- <a class="nav-list-items" href="index.html">News</a> -->
+        <div id="search-box">
+            <div class="tooltip-below">
+                <span class="tooltiptext-below">Goes nowhere, does nothing... yet.</span>
+                <form action="#">
+                    <input type="text" placeholder="Search..." disabled>
+                </form>
             </div>
-            <hr>
-            <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
-            <br>
         </div>
+    </div>
+    <div class="heading">
+        <h1 style="text-align: center;">ABOUT</h1>
+        <p>
+            This is the main project website for Joshua Nolan, an author and programmer.
+        </p>
+    </div>
+
+    <div class="footer">
+        <br>
+        <div class="tooltip">
+            <span class="tooltiptext">Return to top.</span>
+            <a href="#">
+                <img class="footer-quill-pen centered-small" src="../Images/quill-pen.png"
+                    alt="A quill pen in an ink well">
+            </a>
+        </div>
+        <br>
+        <div class="sub-footer">
+            <ul>
+                <li class='centered-list'>
+                    <a href="#">Cookies</a>
+                </li>
+                <li class='centered-list'>
+                    <a href="#">Help</a>
+                </li>
+                <li class='centered-list'>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
+        <br>
+    </div>
 </body>
 
 </html>

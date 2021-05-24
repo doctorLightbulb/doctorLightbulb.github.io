@@ -4,31 +4,32 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#b0c4de">
     <link rel="stylesheet" href="./layout.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7694bb">
-    <link rel="icon" href="Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512"> -->
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#b0c4de">
+    <link rel="icon" href="Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512">
     <title>Joshua Nolan's Project Site</title>
 </head>
 
 <body>
     <div id="changing-display"></div>
-    <div class="nav-bar">
+    <div class="nav-bar" id="topnav">
         <img class="quill-pen" src="Images/quill-pen.png" alt="A quill pen in an ink well">
-        <div class="nav-options">
-            <a class="nav-list-items active-page" href="index.html">Home</a>
-            <a class="nav-list-items" href="./books/index.html">Books</a>
-            <a class="nav-list-items" href="./projects/index.html">Projects</a>
-            <a class="nav-list-items" href="./about/index.html">About</a>
-            <!-- <a class="nav-list-items" href="index.html">News</a> -->
-            <div id="search-box">
+        <a class=" active-page" href="index.html">Home</a>
+        <a href="./books/index.html">Books</a>
+        <a href="./projects/index.html">Projects</a>
+        <a href="./about/index.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myfunction()"></a>
+        <div id="search-box">
+            <div class="tooltip-below">
+                <span class="tooltiptext-below">Goes nowhere, does nothing... yet.</span>
                 <form action="#">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search..." disabled>
                 </form>
             </div>
         </div>
@@ -63,7 +64,8 @@
         <br>
         <div class="tooltip">
             <span class="tooltiptext">Return to top.</span>
-            <a href="#changing-display"><img class="footer-quill-pen" src="Images/quill-pen.png" width="50"
+            <a href="#changing-display">
+                <img class="footer-quill-pen centered-small" src="Images/quill-pen.png"
                     alt="A quill pen in an ink well">
             </a>
         </div>
@@ -71,26 +73,22 @@
         <div class="sub-footer">
             <ul>
                 <li class="centered-list" id="cookies">
-                    <button type="button" class="foot-button"
-                        onclick="document.getElementsByClassName('pop-up-screen').style.display='block'">
-                        <a href="#">Cookies</a>
-                    </button>
+                    <a href="#">Cookies</a>
+                </li>
+                <li class="centered-list" id="help">
+                    <a href="#">Help</a>
                 </li>
                 <li class="centered-list" id="privacy">
-                    <button type="button" class="foot-button"
-                        onclick="document.getElementsByClassName('pop-up-screen').style.display='block'">
-                        <a href="#">Privacy</a>
-                    </button>
+                    <a href="#">Privacy</a>
                 </li>
-                <li class="centered-list" id="help"><a href="#">Help</a></li>
             </ul>
         </div>
         <div class="pop-up-screen">
             <span class="close-button">&times;</span>
             <div class="pop-up-screen-caption">
-                Good news! This site has no cookies as yet!When it
-                does, the option you selected willtake you to a comprehensive
-                description ofwhat information is stored for statisticaland
+                Good news! This site has no cookies as yet! When it
+                does, the option you selected will take you to a comprehensive
+                description of what information is stored for statistical and
                 operational purposes.
             </div>
         </div>
@@ -100,6 +98,24 @@
         <br>
     </div>
     <script src="javaScript-files/code.js"></script>
+    <script>
+        var popUpScreen = "pop-up-screen";
+        var closeButton = "close-button";
+        document.getElementById("privacy").onclick = function () {
+            document.getElementsByClassName(popUpScreen).style.display = "block";
+        }
+        document.getElementsClassName(closeButton).onclick = function () {
+            document.getElementsByClassName(popUpScreen).style.display = "none;"
+        }
+        function myFunction() {
+            var x = document.getElementById("topnav");
+            if (x.className === "nav-bar") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-bar";
+            }
+        }
+    </script>
 </body>
 
 </html>
