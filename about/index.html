@@ -17,12 +17,13 @@
 </head>
 
 <body>
-    <div class="nav-bar">
+    <div class="nav-bar" id="topnav">
         <img class="quill-pen" src="../Images/quill-pen.png" alt="A quill pen in an ink well">
         <a href="../index.html">Home</a>
         <a href="../books/index.html">Books</a>
         <a href="../projects/index.html">Projects</a>
-        <a class="active-page" href="./about/">About</a>
+        <a href="./about/" class="active-page">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">Menu</a>
         <!-- <a class="nav-list-items" href="index.html">News</a> -->
         <div id="search-box">
             <div class="tooltip-below">
@@ -34,7 +35,7 @@
         </div>
     </div>
     <div class="heading">
-        <h1 style="text-align: center;">ABOUT</h1>
+        <h1>ABOUT</h1>
         <p>
             This is the main project website for Joshua Nolan, an author and programmer.
         </p>
@@ -67,6 +68,7 @@
         <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
         <br>
     </div>
+    <script src="../javaScript-files/code.js"></script>
 </body>
 
 </html>

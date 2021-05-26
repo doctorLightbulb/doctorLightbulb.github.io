@@ -1,3 +1,12 @@
+function menu() {
+    var x = document.getElementById("topnav");
+    if (x.className === "nav-bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-bar";
+    }
+}
+
 var popUpScreen = document.getElementsByClassName("pop-up-screen")
 var privacyButton = document.getElementById("privacy")
 

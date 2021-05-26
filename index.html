@@ -20,11 +20,11 @@
     <div id="changing-display"></div>
     <div class="nav-bar" id="topnav">
         <img class="quill-pen" src="Images/quill-pen.png" alt="A quill pen in an ink well">
-        <a class=" active-page" href="index.html">Home</a>
+        <a href="index.html" class="active-page">Home</a>
         <a href="./books/index.html">Books</a>
         <a href="./projects/index.html">Projects</a>
         <a href="./about/index.html">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myfunction()"></a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">Menu</a>
         <div id="search-box">
             <div class="tooltip-below">
                 <span class="tooltiptext-below">Goes nowhere, does nothing... yet.</span>
@@ -98,7 +98,7 @@
         <br>
     </div>
     <script src="javaScript-files/code.js"></script>
-    <script>
+    <!-- <script>
         var popUpScreen = "pop-up-screen";
         var closeButton = "close-button";
         document.getElementById("privacy").onclick = function () {
@@ -107,15 +107,8 @@
         document.getElementsClassName(closeButton).onclick = function () {
             document.getElementsByClassName(popUpScreen).style.display = "none;"
         }
-        function myFunction() {
-            var x = document.getElementById("topnav");
-            if (x.className === "nav-bar") {
-                x.className += " responsive";
-            } else {
-                x.className = "nav-bar";
-            }
-        }
-    </script>
+
+    </script> -->
 </body>
 
 </html>
