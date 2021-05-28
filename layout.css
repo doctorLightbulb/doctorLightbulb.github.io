@@ -205,6 +205,8 @@ form.example::after {
 .footer-quill-pen {
     transition: 0.2s;
     width: 15%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-quill-pen:hover {
@@ -335,6 +337,7 @@ body {
     text-align: center;
     max-width: 100%;
     color: whitesmoke;
+    background-color: white;
 }
 
 ul {
