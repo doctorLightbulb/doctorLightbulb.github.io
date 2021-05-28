@@ -17,7 +17,8 @@ privacyButton.onclick = function () {
     }
 }
 
-var span = document.getElementsByClassName("close-button")[0];
+var span = document.getElementById("close-button")[0];
+
 span.onclick = function () {
     popUpScreen.style.display = "none";
 }
