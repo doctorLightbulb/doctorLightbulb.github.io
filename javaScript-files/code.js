@@ -20,5 +20,5 @@ privacyButton.onclick = function () {
 var span = document.getElementById("close-button")[0];
 
 span.onclick = function () {
-    popUpScreen.style.display = "none";
+    popUpScreen.style.visibility = "hidden";
 }

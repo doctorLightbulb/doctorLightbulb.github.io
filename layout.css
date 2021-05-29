@@ -337,7 +337,6 @@ body {
     text-align: center;
     max-width: 100%;
     color: whitesmoke;
-    background-color: white;
 }
 
 ul {
@@ -406,7 +405,8 @@ h5 {
 }
 
 .pop-up-screen {
-    display: none;
+    visibility: hidden;
+    display: block;
     position: fixed;
     z-index: 11;
     padding-top: 10%;
