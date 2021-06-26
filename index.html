@@ -13,58 +13,80 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7694bb">
     <link rel="icon" href="Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512">
-    <title>Joshua Nolan's Project Site</title>
+    <title>Joshua Nolan's Portfolio</title>
 </head>
 
 <body>
+
     <!-- The slideshow dashboard -->
     <div id="changing-display"></div>
+
+    <!-- The opening message -->
+    <div class="heading-2">
+        <h1 style="font-family: monospace;">Joshua Nolan</h1>
+        <p>User Experience Designer and Coder</p>
+        <h1 style="font-size: 50px; font-family:'Palace Script MT', 'Edwardian Script ITC', cursive;">
+            Welcome!</h1>
+    </div>
 
     <!-- The navigation bar -->
     <div class="nav-bar" id="topnav">
         <img class="quill-pen" src="Images/quill-pen.png" alt="A quill pen in an ink well">
-        <a href="index.html" class="active-page">Home</a>
-        <a href="./books/index.html">Books</a>
-        <a href="./projects/index.html">Projects</a>
+        <a style="font-family: monospace; font-size: large;">Joshua Nolan</a>
+        <a href="index.html" class="active-page">Work</a>
+        <a href="./hobbies/index.html">Hobbies</a>
         <a href="./about/index.html">About</a>
         <a href="contact/index.html">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="menu()">Menu</a>
-        <!--         
-        <div id="search-box">
-            <div class="tooltip-below">
-                <span class="tooltiptext-below">Goes nowhere, does nothing... yet.</span>
-                <form action="#">
-                    <input type="text" placeholder="Search..." disabled>
-                </form>
-            </div>
-        </div> -->
     </div>
 
-    <!-- The opening message -->
-    <div class="heading">
-        <h1>Welcome!</h1>
-        <p>
-            This is the main project website for Joshua Nolan, an author and programmer.
-        </p>
-    </div>
 
+    <br>
     <!-- The menu cards -->
     <div class="text-container">
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <a href="books/index.html">
-                        <img class="centered" src="Images/open-book.PNG" alt="An open book.">
+                    <a href="./projects/project-a.html">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the contents of Project A.</p>
+                        </div>
                     </a>
-                    <h2>BOOKS</h2>
+                    <img class="centered" src="https://www.kasandbox.org/programming-images/landscapes/lake.png" alt="">
+                    <h2>PROJECT A</h2>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <a href="projects/index.html">
-                        <img class="centered" src="Images/hammer-and-wrench.png" alt="A crossed hammer and wrench.">
+                    <a href="./projects/project-b.html">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the contents of Project B.</p>
+                        </div>
                     </a>
-                    <h2>PROJECTS</h2>
+                    <img class="centered" src="https://www.kasandbox.org/programming-images/landscapes/lake.png" alt="">
+                    <h2>PROJECT B</h2>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <a href="./projects/project-c.html">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the contents of Project C.</p>
+                        </div>
+                    </a>
+                    <img class="centered" src="https://www.kasandbox.org/programming-images/landscapes/lake.png" alt="">
+                    <h2>PROJECT C</h2>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <a href="./projects/project-d.html">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the contents of Project D.</p>
+                        </div>
+                    </a>
+                    <img class="centered" src="https://www.kasandbox.org/programming-images/landscapes/lake.png" alt="">
+                    <h2>PROJECT D</h2>
                 </div>
             </div>
         </div>
@@ -82,17 +104,10 @@
         </div>
         <br>
         <div class="sub-footer">
-            <ul>
-                <li class="centered-list" id="cookies">
-                    <a href="#">Cookies</a>
-                </li>
-                <li class="centered-list" id="help">
-                    <a href="#">Help</a>
-                </li>
-                <li class="centered-list" id="privacy">
-                    <a href="#" onclick="show()">Privacy</a>
-                </li>
-            </ul>
+            <div class="centered-list">
+                <a id="cookies">Cookies</a>
+                <a id="privacy">Privacy</a>
+            </div>
         </div>
         <div class="pop-up-screen">
             <span id="close-button" onclick="hide()">&times;</span>

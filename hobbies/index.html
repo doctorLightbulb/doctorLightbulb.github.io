@@ -13,82 +13,86 @@
     <link rel="manifest" href="../site.webmanifest">
     <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#7694bb">
     <link rel="icon" href="../Images/quill-pen-favicon2.jpg" type="image/jpg" sizes="512x512">
-    <title>Books</title>
+    <title>Hobbies</title>
 </head>
 
 <body>
+
+    <!-- The navigation bar -->
     <div class="nav-bar" id="topnav">
         <img class="quill-pen" src="../Images/quill-pen.png" alt="A quill pen in an ink well">
-        <a href="../index.html">Home</a>
-        <a href="../books/index.html" class="active-page">Books</a>
-        <a href="../projects/index.html">Projects</a>
+        <a style="font-family: monospace; font-size: large;">Joshua Nolan</a>
+        <a href="../index.html">Work</a>
+        <a href="../hobbies/index.html" class="active-page">Hobbies</a>
         <a href="../about/index.html">About</a>
         <a href="../contact/index.html">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="menu()">Menu</a>
-        <!-- <a class="nav-list-items">News</a> -->
-        <!-- <div id="search-box">
-            <div class="tooltip-below">
-                <span class="tooltiptext-below">Goes nowhere, does nothing... yet.</span>
-                <form action="#">
-                    <input type="text" placeholder="Search..." disabled>
-                </form>
-            </div>
-        </div> -->
     </div>
+
     <div class="heading">
-        <h1>BOOKS</h1>
-        <p style="line-height: 24px;">
-            <i>
-                <b style=" font-size: x-large;">Please be aware</b>
-                <br>
-                that this site does not offer sales.
-                It merely serves as a pointer to what is available and
-                where it can be found.
-            </i>
+        <h1>HOBBIES</h1>
+        <p>
+            Welcome to my projects page! Here you will find
+            links to many of my projects... <br>
+            <em>and more are coming!</em>
         </p>
     </div>
+
+    <!-- The menu cards -->
     <div class="text-container">
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <a href="../books/alfred-cutler-the-backwoods-boy/index.html">
-                        <img class="centered" src="../Images/alfred-cutler-the-backwoods-boy.jpg"
-                            alt="Alfred Cutler seated beside Sammy, the family sheep dog.">
+                    <a href="books/index.html">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the books I have written so far.</p>
+                        </div>
                     </a>
-                    <h5>Alfred Cutler: The Backwoods Boy</h5>
+                    <img class="centered" src="../Images/open-book.PNG" alt="">
+                    <h2>BOOKS</h2>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <a href="../books/sneak-peeks/index.html">
-                        <img class="centered" src="../Images/coming-coon.png"
-                            alt="A large white question mark against a blue background.">
+                    <a href="coding/index.html">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View a collection of other projects.</p>
+                        </div>
                     </a>
-                    <h5>
-                        Sneak Peeks<br>
-                        <span class="caption">The future is coming!</span>
-                    </h5>
+                    <img class="centered" src="../Images/hammer-and-wrench.png" alt="">
+                    <h2>CODING</h2>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer">
+
+    <!-- The footer -->
+    <div class="footer" onclick="popup()">
         <br>
         <div class="tooltip">
             <span class="tooltiptext">Return to top.</span>
-            <a href="#">
+            <a href="#changing-display">
                 <img class="footer-quill-pen centered-small" src="../Images/quill-pen.png"
                     alt="A quill pen in an ink well">
             </a>
         </div>
         <br>
         <div class="sub-footer">
-            <ul>
-                <li class='centered-list'><a href="#">Cookies</a></li>
-                <li class='centered-list'><a href="#">Help</a></li>
-                <li class='centered-list'><a href="#">Privacy</a></li>
-            </ul>
+            <div class="centered-list">
+                <a id="cookies">Cookies</a>
+                <a id="privacy">Privacy</a>
+            </div>
         </div>
+        <div class="pop-up-screen">
+            <span id="close-button" onclick="hide()">&times;</span>
+            <div class="pop-up-screen-caption">
+                Good news! This site has no cookies as yet! When it
+                does, the option you selected will take you to a comprehensive
+                description of what information is stored for statistical and
+                operational purposes.
+            </div>
+        </div>
+
         <hr>
         <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
         <br>
