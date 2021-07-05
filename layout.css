@@ -7,6 +7,8 @@
     background-size: 100%;
     background-position: center;
     height: 15em;
+    animation-name: display-fade-in;
+    animation-duration: 1s;
 }
 
 .nav-bar {
@@ -20,6 +22,9 @@
     color: whitesmoke;
     box-shadow: 0px 2px 4px black;
     overflow: hidden;
+    height: auto;
+    animation-name: menuBar;
+    animation-duration: 5s;
 }
 
 .nav-bar .icon {
@@ -529,12 +534,16 @@ h5 {
 .signature-title {
     font-family: monospace;
     text-shadow: 2px 2px black;
+    animation-name: signature-slide-in;
+    animation-duration: 0.75s;
 }
 
 .welcome {
     font-size: 3.5em; 
     font-family:'Palace Script MT', 'Edwardian Script ITC', cursive;
     text-shadow: 2px 2px black;
+    animation-name: welcome-slide-in;
+    animation-duration: 0.75s;
 }
 
 .title-paragraph {
@@ -542,6 +551,8 @@ h5 {
     font-size: small;
     line-height: 1em;
     text-shadow: 1px 1px black;
+    animation-name: title-paragraph-slide-in;
+    animation-duration: 0.75s;
 }
 
 .about-heading {
@@ -674,6 +685,54 @@ h5 {
     color: whitesmoke;
 }
 
+/* Animations */
+
+    /* The menu-bar */
+@keyframes menuBar {
+    0% {height: 0;}
+    100% {height: 100%}
+}
+
+    /* The top display */
+@keyframes display-fade-in {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes welcome-slide-in {
+    0% {
+        transform: translate(0px, -200px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes title-paragraph-slide-in {
+    0% {
+        transform: translate(0px, -300px);
+        opacity: 05;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes signature-slide-in {
+    0% {
+        transform: translate(0px, -400px);
+        opacity: 0%;
+        -webkit-filter: blur(100%);
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+        -webkit-filter: blur(0%);
+    }
+}
 
 @media only screen and (max-width: 700px) {
 
@@ -777,6 +836,14 @@ h5 {
 
     .welcome {
         line-height: 0.5em;;
+    }
+
+    .moved-right {
+        padding-left: 0%;
+    }
+    
+    .moved-left {
+        padding-right: 0%;
     }
 
 }
