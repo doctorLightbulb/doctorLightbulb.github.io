@@ -39,7 +39,15 @@
         <a href="./hobbies/index.html">Hobbies</a>
         <a href="./about/index.html">About</a>
         <a href="contact/index.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="menu()">Menu</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuOverlay()">Menu</a>
+    </div>
+    <div id="menu-overlay">
+        <a href="index.html" class="active-page">Work</a>
+        <a href="./hobbies/index.html">Hobbies</a>
+        <a href="./about/index.html">About</a>
+        <a href="contact/index.html">Contact</a>
+        <span id="close-button" onclick="closeCookiesPopUp()">&times;</span><span id="close-button"
+            onclick="closeMenuOverlay()">&times;</span>
     </div>
 
 
@@ -47,7 +55,7 @@
     <!-- The menu cards -->
     <div class="text-container">
         <div class="row">
-            <div class="column">
+            <div class="quad-column">
                 <div class="card">
                     <a href="./projects/project-a.html">
                         <div class="card-overlay">
@@ -58,7 +66,7 @@
                     <h2>PROJECT A</h2>
                 </div>
             </div>
-            <div class="column">
+            <div class="quad-column">
                 <div class="card">
                     <a href="./projects/project-b.html">
                         <div class="card-overlay">
@@ -69,7 +77,7 @@
                     <h2>PROJECT B</h2>
                 </div>
             </div>
-            <div class="column">
+            <div class="quad-column">
                 <div class="card">
                     <a href="./projects/project-c.html">
                         <div class="card-overlay">
@@ -80,7 +88,7 @@
                     <h2>PROJECT C</h2>
                 </div>
             </div>
-            <div class="column">
+            <div class="quad-column">
                 <div class="card">
                     <a href="./projects/project-d.html">
                         <div class="card-overlay">
@@ -106,17 +114,25 @@
         <br>
         <div id="inner-footer">
             <div class="centered-list">
-                <a id="cookies">Cookies</a>
-                <a id="privacy">Privacy</a>
+                <a id="cookies" onclick="cookiesPopUp()">Cookies</a>
+                <a id="privacy" onclick="privacyPopUp()">Privacy</a>
             </div>
         </div>
-        <div class="pop-up-screen">
-            <span id="close-button" onclick="hide()">&times;</span>
-            <div class="pop-up-screen-caption">
+        <div id="cookies-screen">
+            <span id="close-button" onclick="closeCookiesPopUp()">&times;</span>
+            <div id="pop-up-screen-caption">
                 Good news! This site has no cookies as yet! When it
                 does, the option you selected will take you to a comprehensive
                 description of what information is stored for statistical and
                 operational purposes.
+            </div>
+        </div>
+        <div id="privacy-screen">
+            <span id="close-button" onclick="closePrivacyPopUp()">&times;</span>
+            <div id="pop-up-screen-caption">
+                Your privacy is very important to us! Currently no data about you
+                of any kind, not even your browser or machine, is stored by this
+                website, not even for performance reasons.
             </div>
         </div>
 

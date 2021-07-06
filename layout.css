@@ -7,8 +7,6 @@
     background-size: 100%;
     background-position: center;
     height: 15em;
-    animation-name: display-fade-in;
-    animation-duration: 1s;
 }
 
 .nav-bar {
@@ -103,8 +101,11 @@ form.search-container {
 
 .quad-column {
     float: left;
-    width: 50%;
+    width: 25%;
     padding: 10px;
+    margin-bottom: 20px;
+    animation-name: slide-in-from-bottom;
+    animation-duration: 1s;
 }
 
 .row {
@@ -139,6 +140,8 @@ form.search-container {
     box-shadow: 0px 2px 4px black;
     z-index: 1;
     transition: 0.2s;
+    animation-name: slide-in-from-bottom;
+    animation-duration: 1s;
 }
 
 .card:hover {
@@ -367,7 +370,7 @@ a:active {
     transition: 0.5s ease-in-out;   
 }
 
-.nav-bar a.active-page {
+.nav-bar a.active-page, #menu-overlay a.active-page {
     text-align: center;
     background-color:rgb(144, 161, 184);
     padding: 10px 18px;
@@ -385,6 +388,22 @@ a.icon:hover {
     background-color:rgb(144, 161, 184);
     border-left: solid 1px white;
     box-shadow: 0px 2px 4px black;
+}
+
+#menu-overlay a {
+    padding: 2% 0;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+    top: 35%;
+    position: relative;
+    display: block;
+    transition: 0.5s ease-in-out;
+
+}
+
+#menu-overlay a:hover {
+    color: yellow;
 }
 
 .moved-right a {
@@ -432,42 +451,32 @@ a.icon:hover {
     padding-right: 5%;
 }
 
-/* Pop-up screen */
+/* Pop-up screen and menu */
 
-.pop-up-screen {
-    visibility: hidden;
-    display: block;
+#cookies-screen, #privacy-screen, #menu-overlay {
     position: fixed;
     z-index: 11;
-    padding-top: 10%;
     left: 0;
-    top: 0;
+    height: 0%;
+    top: 50%;
+    opacity: 0%;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(144, 161, 184);
-    background-color: rgba(144, 161, 184, 0.9);
+    overflow-y: hidden;
+    background-color: rgb(174, 193, 221);
+    background-image: linear-gradient(rgba(95, 95, 146, 0), rgb(98, 115, 139), rgba(95, 95, 146, 0));
+    transition: 0.5s;
 }
 
-.pop-up-screen-caption {
+#pop-up-screen-caption {
+    margin-top: 40px;
     font-size: x-large;
-    margin: auto;
     display: block;
-    max-width: 700px;
+    max-width: 100%;
     text-align: center;
     color: whitesmoke;
-    padding: 10px 0;
-    height: auto;
-}
-
-.pop-up-screen-caption {
-    animation-name: zoom-in;
-    animation-duration: 0.25s;    
-}
-
-@keyframes zoom-in {
-    from {transition: scale(0.1)}
-    to {transition: scale(1)}
+    padding: 10% 10%;
+    animation-name: caption-zoom-in;
+    animation-duration: 0.25s;
 }
 
 #close-button {
@@ -479,6 +488,7 @@ a.icon:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+
 #close-button:hover {
     opacity: 0.9;
     color: whitesmoke;
@@ -497,6 +507,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: whitesmoke;
+    animation-name: display-fade-in;
+    animation-duration: 1s;
 }
 
 h2 {
@@ -579,6 +591,7 @@ h5 {
 
 #author-portrait {
     display: block;
+    height: 200px;
     width: 60%;
     margin-right: auto;
     margin-left: auto;
@@ -699,6 +712,7 @@ h5 {
     100% {opacity: 100%;}
 }
 
+/* The welcome text */
 @keyframes welcome-slide-in {
     0% {
         transform: translate(0px, -200px);
@@ -710,6 +724,7 @@ h5 {
     }
 }
 
+/* The occupation text */
 @keyframes title-paragraph-slide-in {
     0% {
         transform: translate(0px, -300px);
@@ -721,6 +736,7 @@ h5 {
     }
 }
 
+/* Joshua's name */
 @keyframes signature-slide-in {
     0% {
         transform: translate(0px, -400px);
@@ -734,7 +750,47 @@ h5 {
     }
 }
 
+/* The cards */
+@keyframes slide-in-from-bottom {
+    0% {
+        transform: translate(0px, 400px);
+        opacity: 0%;
+    }
+    50% {
+        opacity: 20%;
+    }
+    85% {
+        opacity: 75%;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes pop-up-expand {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        opacity: 100%;
+    }
+}
+
+/* Pop-up screen caption */
+@keyframes caption-zoom-in {
+    from {transition: scale(0.1)}
+    to {transition: scale(1)}
+}
+
 @media only screen and (max-width: 700px) {
+
+    .quad-column {
+        width: 100%;
+        display: block;
+    }
 
     .column {
         width: 100%;
@@ -812,6 +868,7 @@ h5 {
         text-align: center;
         margin: 0px;
     }
+
     .book-cover {
         padding-left: 10px;
         padding-bottom: 0px;
@@ -849,8 +906,14 @@ h5 {
 }
 
 @media only screen and (min-width: 700px) {
+
+    .quad-column {
+        width: 50%;
+        display: block;
+    }
+
     .column {
-        max-width: 100%;
+        width: 50%;
         display: block;
         margin-bottom: 20px;
     }
@@ -881,11 +944,16 @@ h5 {
 }
 
 @media only screen and (min-width: 1000px) {
+    .quad-column {
+        width: 50%;
+    }
+
     .column {
         max-width: 100%;
         display: block;
         margin-bottom: 20px;
     }
+
     .card {
         max-width: 70%;
     }
@@ -900,5 +968,11 @@ h5 {
 
     .signature-title {
         line-height: 2em;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .quad-column {
+        width: 25%;
     }
 }

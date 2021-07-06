@@ -18,13 +18,21 @@
 
 <body>
     <div class="nav-bar" id="topnav">
-        <img id="quill-pen"" src=" ../../Images/quill-pen.png" alt="A quill pen in an ink well">
+        <img id="quill-pen" src=" ../../Images/quill-pen.png" alt="A quill pen in an ink well">
         <a style="font-family: monospace; font-size: large;">Joshua Nolan</a>
         <a href="../../index.html">Work</a>
         <a href="../../hobbies/index.html" class="active-page">Hobbies</a>
         <a href="../../about/index.html">About</a>
         <a href="../../contact/index.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="menu()">Menu</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuOverlay()">Menu</a>
+    </div>
+    <div id="menu-overlay">
+        <a href="../../index.html">Work</a>
+        <a href="../../hobbies/index.html" class="active-page">Hobbies</a>
+        <a href="../../about/index.html">About</a>
+        <a href="../../contact/index.html">Contact</a>
+        <span id="close-button" onclick="closeCookiesPopUp()">&times;</span><span id="close-button"
+            onclick="closeMenuOverlay()">&times;</span>
     </div>
     <div class="heading">
         <h1>CODING</h1>
@@ -36,7 +44,7 @@
     </div>
     <div class="text-container">
         <div class="row">
-            <div class="column">
+            <div class="quad-column">
                 <div class="card">
                     <a href="https://github.com/doctorLightbulb" target="_blank">
                         <div class="card-overlay">
@@ -48,7 +56,7 @@
                     <h5>Tour My Repositories on GitHub!</h5>
                 </div>
             </div>
-            <div class="column">
+            <div class="quad-column">
                 <div class="card">
                     <a href="https://www.linkedin.com/in/joshua-nolan-38a7a2203?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bq9r%2FrRPoTbivCxCG9SwxDw%3D%3D"
                         target="_blank">
@@ -57,42 +65,38 @@
                         </div>
                     </a>
                     <img src="../../Images/quill-pen.png"
-                        style="display: block; margin-left: auto; margin-right: auto; width: 80%;"
-                        alt="A quill pen sticking out of an inkwell.." style="border-radius: 50%;">
+                        style="display: block; margin-left: auto; margin-right: auto; width: 80%; border-radius: 50%;"
+                        alt="A quill pen sticking out of an inkwell..">
                     <h5>Accomplishments</h5>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <div class="card">
-                <a href="https://www.khanacademy.org/computer-programming/math-hopper-scratch-pad/4803421651288064"
-                    target="_blank">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">View the <strong>Game of Math</strong>—a work in progress.</p>
-                    </div>
-                </a>
-                <img class="centered" src="../../Images/math-hopper.png" alt="" style="border-radius: 50%;">
-                <h5>Math Hopper</h5>
+            <div class="quad-column">
+                <div class="card">
+                    <a href="https://www.khanacademy.org/computer-programming/math-hopper-scratch-pad/4803421651288064"
+                        target="_blank">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the <strong>Game of Math</strong>—a work in progress.</p>
+                        </div>
+                    </a>
+                    <img class="centered" src="../../Images/math-hopper.png" alt="" style="border-radius: 50%;">
+                    <h5>Math Hopper</h5>
+                </div>
+            </div>
+            <div class="quad-column">
+                <div class="card">
+                    <a href="https://www.khanacademy.org/computer-programming/around-the-milky-way-and-back/6603926433447936"
+                        target="_blank">
+                        <div class="card-overlay">
+                            <p class="card-overlay-text">View the toy website on Khan Academy.</p>
+                        </div>
+                    </a>
+                    <img class="centered" src="../../Images/around-the-milky-way-and-back.png"
+                        alt="A picture of the main screen of the website project on Khan Academy Around the Milky Way and Back."
+                        style="border-radius: 50%;">
+                    <h5>Around the Milky Way and Back</h5>
+                </div>
             </div>
         </div>
-        <div class="column">
-            <div class="card">
-                <a href="https://www.khanacademy.org/computer-programming/around-the-milky-way-and-back/6603926433447936"
-                    target="_blank">
-                    <div class="card-overlay">
-                        <p class="card-overlay-text">View the toy website on Khan Academy.</p>
-                    </div>
-                </a>
-                <img class="centered" src="../../Images/around-the-milky-way-and-back.png"
-                    alt="A picture of the main screen of the website project on Khan Academy Around the Milky Way and Back."
-                    style="border-radius: 50%;">
-                <h5>Around the Milky Way and Back</h5>
-            </div>
-        </div>
-    </div>
-    </div>
     </div>
     <div id="footer-container">
         <br>
@@ -105,8 +109,25 @@
         <br>
         <div id="inner-footer">
             <div class="centered-list">
-                <a id="cookies">Cookies</a>
-                <a id="privacy">Privacy</a>
+                <a id="cookies" onclick="cookiesPopUp()">Cookies</a>
+                <a id="privacy" onclick="privacyPopUp()">Privacy</a>
+            </div>
+        </div>
+        <div id="cookies-screen">
+            <span id="close-button" onclick="closeCookiesPopUp()">&times;</span>
+            <div id="pop-up-screen-caption">
+                Good news! This site has no cookies as yet! When it
+                does, the option you selected will take you to a comprehensive
+                description of what information is stored for statistical and
+                operational purposes.
+            </div>
+        </div>
+        <div id="privacy-screen">
+            <span id="close-button" onclick="closePrivacyPopUp()">&times;</span>
+            <div id="pop-up-screen-caption">
+                Your privacy is very important to us! Currently no data about you
+                of any kind, not even your browser or machine, is stored by this
+                website, not even for performance reasons.
             </div>
         </div>
         <hr>
