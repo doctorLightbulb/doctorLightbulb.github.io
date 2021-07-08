@@ -191,9 +191,24 @@ form.search-container {
 }
 
 .text-container {
+    padding: 0% 5%;
     background-color: whitesmoke;
     margin-right: auto;
     margin-left: auto;
+}
+
+.text-container a {
+    display: block;
+    text-decoration: underline;
+    padding: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+.text-container a:hover {
+    
 }
 
 /*  The tooltips */
@@ -462,24 +477,28 @@ a.icon:hover {
     opacity: 0%;
     width: 100%;
     overflow-y: hidden;
-    background-color: rgb(174, 193, 221);
+    background-color: rgb(248, 250, 253);
     background-image: linear-gradient(rgba(95, 95, 146, 0), rgb(98, 115, 139), rgba(95, 95, 146, 0));
     transition: 0.5s;
 }
 
-#pop-up-screen-caption {
-    margin-top: 40px;
+#cookies-screen .pop-up-screen-caption, 
+#privacy-screen .pop-up-screen-caption {
     font-size: x-large;
+    margin-top: 10%;
     display: block;
     max-width: 100%;
     text-align: center;
     color: whitesmoke;
     padding: 10% 10%;
+    text-shadow: 0px 1px 0px black;
     animation-name: caption-zoom-in;
     animation-duration: 0.25s;
 }
 
-#close-button {
+#cookies-screen .close-button, 
+#privacy-screen .close-button, 
+#menu-overlay .close-button { 
     position: absolute;
     top: 15px;
     right: 35px;
@@ -489,7 +508,9 @@ a.icon:hover {
     transition: 0.3s;
 }
 
-#close-button:hover {
+#cookies-screen .close-button:hover, 
+#privacy-screen .close-button:hover, 
+#menu-overlay .close-button:hover {
     opacity: 0.9;
     color: whitesmoke;
     text-decoration: none;
@@ -591,7 +612,6 @@ h5 {
 
 #author-portrait {
     display: block;
-    height: 200px;
     width: 60%;
     margin-right: auto;
     margin-left: auto;
@@ -655,7 +675,7 @@ h5 {
 .book-cover {
     padding-left: 10px;
     padding-bottom: 8px;
-    float: right;
+    float: left;
 }
 
 .story-summary {
@@ -786,6 +806,9 @@ h5 {
 }
 
 @media only screen and (max-width: 700px) {
+    .text-container {
+        padding: 0;
+    }
 
     .quad-column {
         width: 100%;
@@ -901,6 +924,11 @@ h5 {
     
     .moved-left {
         padding-right: 0%;
+    }
+
+    #cookies-screen .pop-up-screen-caption, 
+    #privacy-screen .pop-up-screen-caption {
+        margin-top: 25%;
     }
 
 }
