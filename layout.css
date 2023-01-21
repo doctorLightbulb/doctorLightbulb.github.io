@@ -2,11 +2,14 @@
 
 #changing-display {
     background-color: darkslategray;
-    background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png") no-repeat center/100% 200%;
-    color: white;
-    background-size: 100%;
+    background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     background-position: center;
+    background-blend-mode: lighten;
     height: 15em;
+    color: white;
 }
 
 .nav-bar {
@@ -123,7 +126,7 @@ form.search-container {
 
 .card {
     position: relative;
-    color: rgb(95, 95, 146);
+    color: #5f5f92;
     max-width: 55%;
     max-height: 55%;
     margin-left: auto;
@@ -450,7 +453,8 @@ a.icon:hover {
 }
 
 #footer-container a {
-    color: rgb(95, 95, 146);
+    /* color: rgb(95, 95, 146); */
+    color: whitesmoke;
     transition: 0.5s ease-in-out;
 }
 
@@ -536,7 +540,8 @@ h2 {
 }
 
 h5 {
-    color: rgb(95, 95, 146);
+    /* color: rgb(95, 95, 146); */
+    color: whitesmoke;
     text-align: center;
 }
 
@@ -698,14 +703,18 @@ h5 {
 
 #footer-quill-pen:hover {
     opacity: 0.9;
+    transform: scale(1.05);
+    
 }
 
 #footer-container {
     text-align: center;
     width: 100%;
     height: fit-content;
-    background-color: lightsteelblue;
+    /* background-color: lightsteelblue; */
+    background-color: rgb(133, 153, 179);
     border-top: solid 4px white;
+    box-shadow: 0px -0px 4px black;
 }
 
 #inner-footer {
