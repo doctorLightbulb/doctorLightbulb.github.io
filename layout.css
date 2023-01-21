@@ -32,7 +32,7 @@
     display: none;
     height: 39px;
     transition: 1s;
-    
+
 }
 
 /* The search box */
@@ -52,7 +52,9 @@
     border-radius: 5px;
     box-sizing: border-box;
 }
-#search-box, input:hover {
+
+#search-box,
+input:hover {
     cursor: not-allowed;
 }
 
@@ -60,19 +62,21 @@ input[type=text] {
     padding: 3px;
     width: 100%;
     outline: none;
-    
+
 }
+
 input[type=text]:focus {
-    color:whitesmoke;
-    background-color:rgb(144, 161, 184);
+    color: whitesmoke;
+    background-color: rgb(144, 161, 184);
 }
+
 form.search-container {
     width: 15%;
 }
 
 .search {
     width: 20px;
-    color:rgb(144, 161, 184);
+    color: rgb(144, 161, 184);
 }
 
 #quill-pen {
@@ -111,11 +115,11 @@ form.search-container {
     animation-duration: 1s;
 }
 
-.row {
+#row {
     margin: 0 -5px;
 }
 
-.row:after {
+#row:after {
     content: "";
     display: table;
     clear: both;
@@ -124,7 +128,7 @@ form.search-container {
 
 /* The cards */
 
-.card {
+.card-body {
     position: relative;
     color: #5f5f92;
     max-width: 55%;
@@ -147,12 +151,12 @@ form.search-container {
     animation-duration: 1s;
 }
 
-.card:hover {
+.card-body:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 8px black;
 }
 
-.card h2 {
+.card-body h2 {
     text-align: center;
 }
 
@@ -173,7 +177,7 @@ form.search-container {
     z-index: 4;
 }
 
-.card:hover .card-overlay {
+.card-body:hover .card-overlay {
     bottom: 0;
     opacity: 100%;
     height: 100%;
@@ -193,14 +197,14 @@ form.search-container {
     -ms-transform: translate(-50%, -50%);
 }
 
-.text-container {
+#text-container {
     padding: 0% 5%;
     background-color: whitesmoke;
     margin-right: auto;
     margin-left: auto;
 }
 
-.text-container a {
+#text-container a {
     display: block;
     text-decoration: underline;
     padding: 10px;
@@ -210,9 +214,7 @@ form.search-container {
     transition: 0.5s;
 }
 
-.text-container a:hover {
-    
-}
+#text-container a:hover {}
 
 /*  The tooltips */
 
@@ -254,7 +256,7 @@ form.search-container {
     width: 200px;
     background-color: rgb(144, 161, 184);
     color: whitesmoke;
-    text-align: center; 
+    text-align: center;
     padding: 5px 0;
     left: 50%;
     top: 100%;
@@ -274,9 +276,10 @@ form.search-container {
 }
 
 .tooltiptext-right {
-    background-image: linear-gradient(to left, rgba(95, 95, 146, 0),  rgb(95, 95, 146));
+    background-image: linear-gradient(to left, rgba(95, 95, 146, 0), rgb(95, 95, 146));
     visibility: hidden;
-    text-overflow: clip;;
+    text-overflow: clip;
+    ;
     line-height: 2em;
     width: 0px;
     text-align: center;
@@ -309,11 +312,11 @@ form.search-container {
     display: inline-block;
 }
 
-.tooltip-left .tooltiptext-left{
+.tooltip-left .tooltiptext-left {
     visibility: hidden;
     width: 120px;
     line-height: 2em;
-    background-image: linear-gradient(to right, rgba(95, 95, 146, 0),  rgb(95, 95, 146));
+    background-image: linear-gradient(to right, rgba(95, 95, 146, 0), rgb(95, 95, 146));
     text-align: center;
     border-radius: 10%;
     padding: 5px 0;
@@ -356,14 +359,16 @@ form.search-container {
     -webkit-transform: rotate(135deg);
 }
 
-.right:hover, .left:hover{
+.right:hover,
+.left:hover {
     opacity: 75%;
     transition: 0.5s;
     cursor: pointer;
 }
 
-.right:active, .left:active{
-    background-color:rgba(0, 0, 0, 0);
+.right:active,
+.left:active {
+    background-color: rgba(0, 0, 0, 0);
     transition: 0.5s;
 
 }
@@ -385,12 +390,13 @@ a:active {
     text-align: center;
     margin-right: 6%;
     padding: 10px 18px;
-    transition: 0.5s ease-in-out;   
+    transition: 0.5s ease-in-out;
 }
 
-.nav-bar a.active-page, #menu-overlay a.active-page {
+.nav-bar a.active-page,
+#menu-overlay a.active-page {
     text-align: center;
-    background-color:rgb(144, 161, 184);
+    background-color: rgb(144, 161, 184);
     padding: 10px 18px;
     border-right: solid 1px white;
     border-left: solid 1px white;
@@ -403,7 +409,7 @@ a:active {
 }
 
 a.icon:hover {
-    background-color:rgb(144, 161, 184);
+    background-color: rgb(144, 161, 184);
     border-left: solid 1px white;
     box-shadow: 0px 2px 4px black;
 }
@@ -472,7 +478,9 @@ a.icon:hover {
 
 /* Pop-up screen and menu */
 
-#cookies-screen, #privacy-screen, #menu-overlay {
+#cookies-screen,
+#privacy-screen,
+#menu-overlay {
     position: fixed;
     z-index: 11;
     left: 0;
@@ -486,7 +494,7 @@ a.icon:hover {
     transition: 0.5s;
 }
 
-#cookies-screen .pop-up-screen-caption, 
+#cookies-screen .pop-up-screen-caption,
 #privacy-screen .pop-up-screen-caption {
     font-size: x-large;
     margin-top: 10%;
@@ -499,20 +507,20 @@ a.icon:hover {
     animation-duration: 0.25s;
 }
 
-#cookies-screen .close-button, 
-#privacy-screen .close-button, 
-#menu-overlay .close-button { 
+#cookies-screen .close-button,
+#privacy-screen .close-button,
+#menu-overlay .close-button {
     position: absolute;
     top: 15px;
     right: 35px;
-    color:rgb(95, 95, 146);
+    color: rgb(95, 95, 146);
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-#cookies-screen .close-button:hover, 
-#privacy-screen .close-button:hover, 
+#cookies-screen .close-button:hover,
+#privacy-screen .close-button:hover,
 #menu-overlay .close-button:hover {
     opacity: 0.9;
     color: whitesmoke;
@@ -549,13 +557,13 @@ h5 {
 
 .paragraph {
     /* color:rgb(98, 115, 139); */
-    color:rgb(144, 161, 184);
+    color: rgb(144, 161, 184);
     text-align: left;
 }
 
 .about-paragraph {
     /* color:rgb(98, 115, 139); */
-    color:rgb(144, 161, 184);
+    color: rgb(144, 161, 184);
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
@@ -576,15 +584,15 @@ h5 {
 }
 
 .welcome {
-    font-size: 3.5em; 
-    font-family:'Palace Script MT', 'Edwardian Script ITC', cursive;
+    font-size: 3.5em;
+    font-family: 'Palace Script MT', 'Edwardian Script ITC', cursive;
     text-shadow: 2px 2px black;
     animation-name: welcome-slide-in;
     animation-duration: 0.75s;
 }
 
 .title-paragraph {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: small;
     line-height: 1em;
     text-shadow: 1px 1px black;
@@ -596,14 +604,16 @@ h5 {
     color: #90a1b8;
     font-style: italic;
     text-align: left;
-    line-height: 1em;;
+    line-height: 1em;
+    ;
 }
 
 .about-heading-2 {
     color: rgb(144, 161, 184);
     font-style: italic;
     text-align: center;
-    line-height: 1em;;
+    line-height: 1em;
+    ;
 }
 
 .fancy-heading {
@@ -611,7 +621,8 @@ h5 {
     font-family: 'Palace Script MT', 'Edwardian Script ITC', cursive;
     text-align: center;
     font-size: 2.5em;
-    line-height: 1em;;
+    line-height: 1em;
+    ;
 }
 
 #author-portrait {
@@ -633,7 +644,7 @@ h5 {
 }
 
 .caption-2 {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(163, 163, 163);
     text-align: left;
     line-height: 0.05em;
@@ -704,7 +715,7 @@ h5 {
 #footer-quill-pen:hover {
     opacity: 0.9;
     transform: scale(1.05);
-    
+
 }
 
 #footer-container {
@@ -728,16 +739,26 @@ h5 {
 
 /* Animations */
 
-    /* The menu-bar */
+/* The menu-bar */
 @keyframes menuBar {
-    0% {height: 0;}
-    100% {height: 100%}
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%
+    }
 }
 
-    /* The top display */
+/* The top display */
 @keyframes display-fade-in {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 /* The welcome text */
@@ -746,6 +767,7 @@ h5 {
         transform: translate(0px, -200px);
         opacity: 0%;
     }
+
     100% {
         transform: translate(0px, 0px);
         opacity: 100%;
@@ -758,6 +780,7 @@ h5 {
         transform: translate(0px, -300px);
         opacity: 05;
     }
+
     100% {
         transform: translate(0px, 0px);
         opacity: 100%;
@@ -771,6 +794,7 @@ h5 {
         opacity: 0%;
         -webkit-filter: blur(100%);
     }
+
     100% {
         transform: translate(0px, 0px);
         opacity: 100%;
@@ -784,12 +808,15 @@ h5 {
         transform: translate(0px, 400px);
         opacity: 0%;
     }
+
     50% {
         opacity: 20%;
     }
+
     85% {
         opacity: 75%;
     }
+
     100% {
         transform: translate(0px, 0px);
         opacity: 100%;
@@ -801,6 +828,7 @@ h5 {
         height: 0;
         opacity: 0;
     }
+
     100% {
         height: 100%;
         opacity: 100%;
@@ -809,8 +837,13 @@ h5 {
 
 /* Pop-up screen caption */
 @keyframes caption-zoom-in {
-    from {transition: scale(0.1)}
-    to {transition: scale(1)}
+    from {
+        transition: scale(0.1)
+    }
+
+    to {
+        transition: scale(1)
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -829,7 +862,7 @@ h5 {
         margin-bottom: 20px;
     }
 
-    .card {
+    .card-body {
         max-width: 75%;
         max-height: 75%;
     }
@@ -903,7 +936,7 @@ h5 {
     .book-cover {
         padding-left: 10px;
         padding-bottom: 0px;
-        float:none;
+        float: none;
     }
 
     .story-summary {
@@ -923,18 +956,19 @@ h5 {
     }
 
     .welcome {
-        line-height: 0.5em;;
+        line-height: 0.5em;
+        ;
     }
 
     .moved-right {
         padding-left: 0%;
     }
-    
+
     .moved-left {
         padding-right: 0%;
     }
 
-    #cookies-screen .pop-up-screen-caption, 
+    #cookies-screen .pop-up-screen-caption,
     #privacy-screen .pop-up-screen-caption {
         margin-top: 25%;
     }
@@ -954,7 +988,7 @@ h5 {
         margin-bottom: 20px;
     }
 
-    .card {
+    .card-body {
         max-width: 90%;
     }
 
@@ -975,7 +1009,8 @@ h5 {
     }
 
     .welcome {
-        line-height: 0.5em;;
+        line-height: 0.5em;
+        ;
     }
 }
 
@@ -990,7 +1025,7 @@ h5 {
         margin-bottom: 20px;
     }
 
-    .card {
+    .card-body {
         max-width: 70%;
     }
 
