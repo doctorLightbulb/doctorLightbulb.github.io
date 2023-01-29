@@ -311,53 +311,30 @@ if (local_pathname === "doctorLightbulb.github.io/index.html") {
     })
 }
 
+const headerElement = document.querySelector("changing-display");
+const footerElement = document.querySelector("footer-container");
 
+// const fetchHeader = async () => {
+//     try {
+//         const res = await fetch("assets/txt-files.txt/header.txt");
+//         const template = await res.text();
 
-const footerContainer = document.getElementById("footer-container")
+//         headerElement.innerHTML = template;
+//     } catch (err) {
+//         console.log(err);
+//     }
+// };
 
-footerist.forEach((item) => {
-    // Create card element:
-    const card = document.createElement("div");
-    card.classList = "card-body";
+const fetchFooter = async () => {
+    try {
+        const res = await fetch("../../assets/txt-files/footer.txt");
+        const template = await res.text();
 
-    // Define card content:
-    const content = `
-        <br>
-        <div class="tooltip">
-            <span class="tooltiptext">Return to top.</span>
-            <a href="#">
-                <img id="footer-quill-pen" src="../../Images/joshua-nolan-logo.png" alt="">
-            </a>
-        </div>
-        <br>
-        <div id="inner-footer">
-            <div class="centered-list">
-                <a id="cookies" onclick="cookiesPopUp()">Cookies</a>
-                <a id="privacy" onclick="privacyPopUp()">Privacy</a>
-            </div>
-        </div>
-        <div id="cookies-screen">
-            <span class="close-button" onclick="closeCookiesPopUp()">&times;</span>
-            <div class="pop-up-screen-caption">
-                Good news! This site has no cookies as yet! When it
-                does, the option you selected will take you to a comprehensive
-                description of what information is stored for statistical and
-                operational purposes.
-            </div>
-        </div>
-        <div id="privacy-screen">
-            <span class="close-button" onclick="closePrivacyPopUp()">&times;</span>
-            <div class="pop-up-screen-caption">
-                Your privacy is very important to us! Currently no data about you
-                of any kind, not even your browser or machine, is stored by this
-                website, not even for performance reasons.
-            </div>
-        </div>
-        <hr>
-        <h5>© 2021 Joshua Nolan. All Rights Reserved.</h5>
-        <br>
-    </div>
-    `;
-    // Append each created element to the container:
-    footerContainer.innerHTML += content;
-})
+        footerElement.innerHTML = template;
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+// fetchHeader();
+fetchFooter();
