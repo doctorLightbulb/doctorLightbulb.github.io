@@ -1,0 +1,1052 @@
+/* This file contains everything to do with styling the webiste. */
+
+#changing-display {
+    background-color: darkslategray;
+    background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: lighten;
+    height: 15em;
+    color: white;
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-width: auto;
+    background-color: #b0c4de;
+    border-bottom: solid 4px;
+    border-color: white;
+    color: whitesmoke;
+    box-shadow: 0px 2px 4px black;
+    overflow: hidden;
+    height: auto;
+    animation-name: menuBar;
+    animation-duration: 5s;
+}
+
+.nav-bar .icon {
+    display: none;
+    height: 39px;
+    transition: 1s;
+
+}
+
+/* The search box */
+
+#search-box {
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    color: gray;
+    float: right;
+    display: inline;
+    width: 20%;
+    margin-right: 2%;
+    padding: 2px;
+    background-color: whitesmoke;
+    border: solid 1px gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#search-box,
+input:hover {
+    cursor: not-allowed;
+}
+
+input[type=text] {
+    padding: 3px;
+    width: 100%;
+    outline: none;
+
+}
+
+input[type=text]:focus {
+    color: whitesmoke;
+    background-color: rgb(144, 161, 184);
+}
+
+form.search-container {
+    width: 15%;
+}
+
+.search {
+    width: 20px;
+    color: rgb(144, 161, 184);
+}
+
+#quill-pen {
+    /* max-width: 100%;
+    width: 4%; */
+    float: left;
+    width: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: 0.2s;
+    display: block;
+    background-color: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+}
+
+#quill-pen:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.quad-column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+    animation-name: slide-in-from-bottom;
+    animation-duration: 1s;
+}
+
+#row {
+    margin: 0 -5px;
+}
+
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* The cards */
+
+.card-body {
+    position: relative;
+    color: #5f5f92;
+    max-width: 55%;
+    max-height: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;
+    background-color: white;
+    border-style: solid;
+    border: 4px solid lightsteelblue;
+    border-radius: 10%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 45px;
+    box-shadow: 0px 2px 4px black;
+    z-index: 1;
+    transition: 0.2s;
+    animation-name: slide-in-from-bottom;
+    animation-duration: 1s;
+}
+
+.card-body:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px black;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* The card overlay */
+
+.card-overlay {
+    border-radius: 20%;
+    bottom: 50%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0%;
+    background-image: linear-gradient(rgba(95, 95, 146, 0), rgb(98, 115, 139), rgba(95, 95, 146, 0));
+    color: white;
+    opacity: 0%;
+    transition: .5s ease-in-out;
+    z-index: 4;
+}
+
+.card-body:hover .card-overlay {
+    bottom: 0;
+    opacity: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+.card-overlay-text {
+    position: absolute;
+    text-align: center;
+    overflow-wrap: break-word;
+    inline-size: 80%;
+    word-wrap: break-word;
+    top: 25%;
+    left: 50%;
+    transition: .3s ease-in;
+    transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#text-container {
+    padding: 0% 5%;
+    background-color: whitesmoke;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#text-container a {
+    display: block;
+    text-decoration: underline;
+    padding: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+/*  The tooltips */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    opacity: 0;
+    height: 0;
+    transition: 0.5s;
+    width: 120px;
+    background-color: rgb(144, 161, 184);
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px 0;
+    left: 50%;
+    bottom: 100%;
+    margin-left: -60px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 100%;
+    height: 20%;
+}
+
+.tooltip-below {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-below .tooltiptext-below {
+    opacity: 0;
+    transition: 0.5s;
+    width: 200px;
+    background-color: rgb(144, 161, 184);
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px 0;
+    left: 50%;
+    top: 100%;
+    margin-left: -100px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip-below:hover .tooltiptext-below {
+    opacity: 100%;
+}
+
+.tooltip-right {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext-right {
+    background-image: linear-gradient(to left, rgba(95, 95, 146, 0), rgb(95, 95, 146));
+    visibility: hidden;
+    text-overflow: clip;
+    ;
+    line-height: 2em;
+    width: 0px;
+    text-align: center;
+    border-radius: 10%;
+    padding: 5px 0;
+    opacity: 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 0;
+    top: -0px;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    transition: 0.5s;
+}
+
+.tooltip-right:hover .tooltiptext-right {
+    visibility: visible;
+    opacity: 100%;
+    width: 120px;
+    top: -70px;
+}
+
+.tooltip-left {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-left .tooltiptext-left {
+    visibility: hidden;
+    width: 120px;
+    line-height: 2em;
+    background-image: linear-gradient(to right, rgba(95, 95, 146, 0), rgb(95, 95, 146));
+    text-align: center;
+    border-radius: 10%;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 2;
+    top: -60px;
+    right: 50%;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.tooltip-left:hover .tooltiptext-left {
+    visibility: visible;
+}
+
+/* The arrow and its associated pieces */
+
+.arrow {
+    border: solid white;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 15px;
+}
+
+.right {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.right:hover,
+.left:hover {
+    opacity: 75%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.right:active,
+.left:active {
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+
+}
+
+/* a-tag elements */
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    background-color: whitesmoke;
+}
+
+.nav-bar a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    margin-right: 6%;
+    padding: 10px 18px;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-bar a.active-page,
+#menu-overlay a.active-page {
+    text-align: center;
+    background-color: rgb(144, 161, 184);
+    padding: 10px 18px;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    box-shadow: 0px 2px 4px black;
+}
+
+.nav-bar a:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+a.icon:hover {
+    background-color: rgb(144, 161, 184);
+    border-left: solid 1px white;
+    box-shadow: 0px 2px 4px black;
+}
+
+#menu-overlay a {
+    padding: 2% 0;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+    top: 35%;
+    position: relative;
+    display: block;
+    transition: 0.5s ease-in-out;
+
+}
+
+#menu-overlay a:hover {
+    color: yellow;
+}
+
+.moved-right a {
+    display: block;
+    text-decoration: underline;
+    padding: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+.moved-left a {
+    display: block;
+    text-decoration: underline;
+    padding: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+.moved-right a:hover {
+    color: yellow;
+}
+
+.moved-left a:hover {
+    color: yellow;
+}
+
+#footer-container a {
+    /* color: rgb(95, 95, 146); */
+    color: whitesmoke;
+    transition: 0.5s ease-in-out;
+}
+
+#footer-container a:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.centered-list a {
+    display: inline;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Pop-up screen and menu */
+
+#cookies-screen,
+#privacy-screen,
+#menu-overlay {
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    height: 0%;
+    top: 50%;
+    opacity: 0%;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #b0c4de;
+    /* background-image: linear-gradient(rgba(95, 95, 146, 0), rgb(98, 115, 139), rgba(95, 95, 146, 0)); */
+    transition: 0.5s;
+}
+
+#cookies-screen .pop-up-screen-caption,
+#privacy-screen .pop-up-screen-caption {
+    font-size: x-large;
+    margin-top: 10%;
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10% 10%;
+    animation-name: caption-zoom-in;
+    animation-duration: 0.25s;
+}
+
+#cookies-screen .close-button,
+#privacy-screen .close-button,
+#menu-overlay .close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: rgb(95, 95, 146);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#cookies-screen .close-button:hover,
+#privacy-screen .close-button:hover,
+#menu-overlay .close-button:hover {
+    opacity: 0.9;
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Native tag elements */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+    animation-name: display-fade-in;
+    animation-duration: 1s;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Stylist classes */
+
+.paragraph {
+    /* color:rgb(98, 115, 139); */
+    color: rgb(144, 161, 184);
+    text-align: left;
+}
+
+.about-paragraph {
+    /* color:rgb(98, 115, 139); */
+    color: rgb(144, 161, 184);
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.signature {
+    font-family: monospace;
+    text-align: left;
+    font-size: 150%;
+    line-height: 0.15em;
+}
+
+.signature-title {
+    font-family: monospace;
+    text-shadow: 2px 2px black;
+    animation-name: signature-slide-in;
+    animation-duration: 0.75s;
+}
+
+.welcome {
+    font-size: 3.5em;
+    font-family: 'Palace Script MT', 'Edwardian Script ITC', cursive;
+    text-shadow: 2px 2px black;
+    animation-name: welcome-slide-in;
+    animation-duration: 0.75s;
+}
+
+.title-paragraph {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+    line-height: 1em;
+    text-shadow: 1px 1px black;
+    animation-name: title-paragraph-slide-in;
+    animation-duration: 0.75s;
+}
+
+.about-heading {
+    color: #90a1b8;
+    font-style: italic;
+    text-align: left;
+    line-height: 1em;
+    ;
+}
+
+.about-heading-2 {
+    color: rgb(144, 161, 184);
+    font-style: italic;
+    text-align: center;
+    line-height: 1em;
+    ;
+}
+
+.fancy-heading {
+    color: rgb(144, 161, 184);
+    font-family: 'Palace Script MT', 'Edwardian Script ITC', cursive;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1em;
+    ;
+}
+
+#author-portrait {
+    display: block;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0px 5px 8px black;
+}
+
+.moved-right {
+    padding-left: 25%;
+}
+
+.moved-left {
+    padding-right: 25%;
+}
+
+.caption-2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(163, 163, 163);
+    text-align: left;
+    line-height: 0.05em;
+}
+
+.heading {
+    line-height: 24px;
+    text-align: center;
+    color: rgb(144, 161, 184);
+    padding-top: 15px;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.heading-2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    height: 75%;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-right: 20%;
+    padding-left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.caption {
+    font-size: 15px;
+    font-style: italic;
+    padding-top: 3px;
+    border-top: solid 1px rgb(144, 161, 184);
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.book-cover {
+    padding-left: 10px;
+    padding-bottom: 8px;
+    float: left;
+}
+
+.story-summary {
+    text-align: justify;
+    line-height: 24px;
+    padding-bottom: 120px;
+}
+
+/* The footer */
+
+#footer-quill-pen {
+    transition: 0.2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    background-color: rgb(255, 255, 224);
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+}
+
+#footer-quill-pen:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+
+}
+
+#footer-container {
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+    height: fit-content;
+    /* background-color: lightsteelblue; */
+    background-color: rgb(133, 153, 179);
+    border-top: solid 4px white;
+    box-shadow: 0px -0px 4px black;
+}
+
+#inner-footer {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    text-align: center;
+    max-width: 100%;
+    color: whitesmoke;
+}
+
+/* Animations */
+
+/* The menu-bar */
+@keyframes menuBar {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%
+    }
+}
+
+/* The top display */
+@keyframes display-fade-in {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+/* The welcome text */
+@keyframes welcome-slide-in {
+    0% {
+        transform: translate(0px, -200px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
+}
+
+/* The occupation text */
+@keyframes title-paragraph-slide-in {
+    0% {
+        transform: translate(0px, -300px);
+        opacity: 05;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
+}
+
+/* Joshua's name */
+@keyframes signature-slide-in {
+    0% {
+        transform: translate(0px, -400px);
+        opacity: 0%;
+        -webkit-filter: blur(100%);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+        -webkit-filter: blur(0%);
+    }
+}
+
+/* The cards */
+@keyframes slide-in-from-bottom {
+    0% {
+        transform: translate(0px, 400px);
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 20%;
+    }
+
+    85% {
+        opacity: 75%;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes pop-up-expand {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 100%;
+        opacity: 100%;
+    }
+}
+
+/* Pop-up screen caption */
+@keyframes caption-zoom-in {
+    from {
+        transition: scale(0.1)
+    }
+
+    to {
+        transition: scale(1)
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .text-container {
+        padding: 0;
+    }
+
+    .quad-column {
+        width: 100%;
+        display: block;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        max-width: 75%;
+        max-height: 75%;
+    }
+
+    .centered-small {
+        width: 30%;
+    }
+
+    .centered-list {
+        display: inline;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 5%;
+    }
+
+    #quill-pen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 8px;
+        margin-right: 0;
+    }
+
+    #footer-quill-pen {
+        width: 20%;
+    }
+
+    #changing-display {
+        height: 14em;
+    }
+
+    .tooltip-below .tooltiptext-below {
+        margin-left: -150px;
+    }
+
+    #search-box {
+        display: none;
+    }
+
+    .nav-bar a {
+        margin-left: 50px;
+    }
+
+    .nav-bar a:not(:nth-child(2)) {
+        display: none;
+    }
+
+    .nav-bar a.icon {
+        float: right;
+        display: block;
+    }
+
+    .nav-bar.responsive {
+        position: relative;
+    }
+
+    .nav-bar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav-bar.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .book-cover {
+        padding-left: 10px;
+        padding-bottom: 0px;
+        float: none;
+    }
+
+    .story-summary {
+        padding-bottom: 40px;
+    }
+
+    .tooltip .tooltiptext {
+        line-height: 0.75em;
+    }
+
+    .signature-title {
+        line-height: 1.5em;
+    }
+
+    .title-paragraph {
+        line-height: 1em;
+    }
+
+    .welcome {
+        line-height: 0.5em;
+        ;
+    }
+
+    .moved-right {
+        padding-left: 0%;
+    }
+
+    .moved-left {
+        padding-right: 0%;
+    }
+
+    #cookies-screen .pop-up-screen-caption,
+    #privacy-screen .pop-up-screen-caption {
+        margin-top: 25%;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    .quad-column {
+        width: 50%;
+        display: block;
+    }
+
+    .column {
+        width: 50%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        max-width: 90%;
+    }
+
+    .nav-bar a {
+        margin-right: 4%;
+    }
+
+    #footer-quill-pen {
+        width: 18%;
+    }
+
+    .signature-title {
+        line-height: 1.5em;
+    }
+
+    .title-paragraph {
+        line-height: 1em;
+    }
+
+    .welcome {
+        line-height: 0.5em;
+        ;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .quad-column {
+        width: 50%;
+    }
+
+    .column {
+        max-width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        max-width: 70%;
+    }
+
+    .nav-bar a {
+        margin-right: 6%;
+    }
+
+    #footer-quill-pen {
+        width: 10%;
+    }
+
+    .signature-title {
+        line-height: 2em;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .quad-column {
+        width: 25%;
+    }
+}

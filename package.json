@@ -1,0 +1,24 @@
+{
+  "name": "doctorlightbulb.github.io",
+  "version": "1.0.0",
+  "description": "A portfolio website.",
+  "main": "index.html",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "jshint": "^2.13.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctorLightbulb/doctorLightbulb.github.io.git"
+  },
+  "author": "Joshua Nolan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doctorLightbulb/doctorLightbulb.github.io/issues"
+  },
+  "homepage": "https://github.com/doctorLightbulb/doctorLightbulb.github.io#readme"
+}
