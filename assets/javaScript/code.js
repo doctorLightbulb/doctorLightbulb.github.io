@@ -326,7 +326,7 @@ const footerElement = document.querySelector("footer-container");
 
 const fetchFooter = async () => {
     try {
-        const res = await fetch("../../../assets/txt-files/footer.txt");
+        const res = await fetch("../txt-files/footer.txt");
         const template = await res.text();
 
         footerElement.innerHTML = template;
