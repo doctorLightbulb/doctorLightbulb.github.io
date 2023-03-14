@@ -156,14 +156,15 @@ const codingList = [{
 
 // Control which cards to show depending on which page is loaded.
 var pathname = window.location.pathname; // Load the pathname
-var pieces = pathname.split(/[\s/]+/)
+var pieces = pathname.split(/[\s/]+/);
 var last = pieces[pieces.length - 1]
 var secondToLast = pieces[pieces.length - 2]
 var localPathname = secondToLast + "/" + last
+console.log(pathname);
 
 const container = document.getElementById("row");
 
-if (localPathname === "localhost:8080/index.html") {
+if (localPathname === "/index.html") {
     projectsList.forEach((item) => {
         // Create card element:
         const card = document.createElement("div");
@@ -225,7 +226,7 @@ if (localPathname === "localhost:8080/index.html") {
                     <h3 class="signature">I am Joshua Nolan</h3>
                     <h5 class="caption-2">USER EXPERIENCE DESIGNER</h5>
                 </div>
-                <img id="author-portrait" src="../Images/author-portrait.jpg">
+                <img id="author-portrait" src="../assets/images/author-portrait.jpg">
                 <h2 class="about-heading-2">CONTACT</h2>
                 <a href="mailto:contactjoshuanolan@icloud.com" class="about-paragraph">Email</a>
                 <a href="https://www.linkedin.com/in/joshua-nolan-38a7a2203?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BE%2FcpA92ZQQ673MGP00cflQ%3D%3D"
@@ -283,7 +284,7 @@ if (localPathname === "localhost:8080/index.html") {
         `;
         // Append each created element to the container:
         container.innerHTML += content;
-    })
+    });
 } else if (localPathname === "coding/index.html") {
     codingList.forEach((item) => {
         // Create card element:
@@ -307,33 +308,6 @@ if (localPathname === "localhost:8080/index.html") {
         `;
         // Append each created element to the container:
         container.innerHTML += content;
-    })
+    });
 }
 
-const headerElement = document.querySelector("changing-display");
-const footerElement = document.querySelector("footer-container");
-
-// const fetchHeader = async () => {
-//     try {
-//         const res = await fetch("assets/txt-files.txt/header.txt");
-//         const template = await res.text();
-
-//         headerElement.innerHTML = template;
-//     } catch (err) {
-//         console.log(err);
-//     }
-// };
-
-const fetchFooter = async () => {
-    try {
-        const res = await fetch("../txt-files/footer.txt");
-        const template = await res.text();
-
-        footerElement.innerHTML = template;
-    } catch (err) {
-        console.log(err);
-    }
-};
-
-// fetchHeader();
-fetchFooter();

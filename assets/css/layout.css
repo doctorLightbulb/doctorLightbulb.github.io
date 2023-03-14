@@ -796,12 +796,14 @@ h2 {
         transform: translate(0px, -400px);
         opacity: 0%;
         -webkit-filter: blur(100%);
+        filter: blur(100%);
     }
 
     100% {
         transform: translate(0px, 0px);
         opacity: 100%;
         -webkit-filter: blur(0%);
+        filter: blur(0%);
     }
 }
 
