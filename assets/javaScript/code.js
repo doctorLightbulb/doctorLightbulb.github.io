@@ -99,26 +99,26 @@ const projectsList = [{
 const hobbiesList = [{
     title: "Books",
     overlayText: "View the books I have written so far.",
-    cardImage: "../assets/images/open-book.PNG",
+    cardImage: "/assets/images/open-book.PNG",
     imageAltText: "A cartoon book.",
     linkURL: "books/index.html",
 },
 {
     title: "Coding",
     overlayText: "View a collection of other projects.",
-    cardImage: "../assets/images/hammer-and-wrench.png",
+    cardImage: "/assets/images/hammer-and-wrench.png",
     imageAltText: "A cartoon crossed hammer and wrench.",
     linkURL: "coding/index.html",
 }];
 
 // Books page
 const booksList = [{
-    cardImage: "../../assets/images/alfred-cutler-the-backwoods-boy.jpg",
+    cardImage: "/assets/images/alfred-cutler-the-backwoods-boy.jpg",
     imageAltText: "Alfred Cutler seated beside Sammy, the family sheep dog.",
     linkURL: "../books/alfred-cutler-the-backwoods-boy/index.html",
 },
 {
-    cardImage: "../../assets/images/sneak-peeks.jpg",
+    cardImage: "/assets/images/sneak-peeks.jpg",
     imageAltText: "A large white question mark against a blue background.",
     linkURL: "../books/sneak-peeks/index.html",
 }];
@@ -127,40 +127,37 @@ const booksList = [{
 const codingList = [{
     title: "Tour My Repositories",
     overlayText: "Follow the yellow brick road... <em>to GitHub!</em>",
-    cardImage: "../../assets/images/doctorLightbulb.JPG",
+    cardImage: "/assets/images/doctorLightbulb.JPG",
     imageAltText: "A portrait of Doctor Ignatius Quincy Lightbulb",
     linkURL: "https://github.com/doctorLightbulb",
 },
 {
     title: "Accomplishments",
     overlayText: "View my profile and certificates on LinkedIn.",
-    cardImage: "../../assets/images/doctorLightbulb.JPG",
+    cardImage: "/assets/images/doctorLightbulb.JPG",
     imageAltText: "A portrait of Doctor Ignatius Quincy Lightbulb",
     linkURL: "https://www.linkedin.com/in/joshua-nolan-38a7a2203?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bq9r%2FrRPoTbivCxCG9SwxDw%3D%3D",
 },
 {
     title: "Math Hopper",
     overlayText: "View the <strong>Game of Math</strong>—a work in progress.",
-    cardImage: "../../assets/images/doctorLightbulb.JPG",
+    cardImage: "/assets/images/doctorLightbulb.JPG",
     imageAltText: "A portrait of Doctor Ignatius Quincy Lightbulb",
     linkURL: "https://www.khanacademy.org/computer-programming/math-hopper-scratch-pad/4803421651288064",
 },
 {
     title: "Around the Milky Way and Back",
     overlayText: "View the toy website on Khan Academy.",
-    cardImage: "../../assets/images/doctorLightbulb.JPG",
+    cardImage: "/assets/images/doctorLightbulb.JPG",
     imageAltText: "A picture of the main screen of the website project on Khan Academy Around the Milky Way and Back.",
     linkURL: "https://www.khanacademy.org/computer-programming/around-the-milky-way-and-back/6603926433447936",
 }];
 
 
 // Control which cards to show depending on which page is loaded.
-var pathname = window.location.pathname; // Load the pathname
-var pieces = pathname.split(/[\s/]+/);
-var last = pieces[pieces.length - 1]
-var secondToLast = pieces[pieces.length - 2]
-var localPathname = secondToLast + "/" + last
-console.log(pathname);
+var fullURL = window.location.pathname.split(/[\s/]+/); // Load the pathname
+var localPathname = fullURL.slice(-2).join("/");
+console.log(localPathname); //  Present for testing.
 
 const container = document.getElementById("row");
 
@@ -226,7 +223,7 @@ if (localPathname === "/index.html") {
                     <h3 class="signature">I am Joshua Nolan</h3>
                     <h5 class="caption-2">USER EXPERIENCE DESIGNER</h5>
                 </div>
-                <img id="author-portrait" src="../assets/images/author-portrait.jpg">
+                <img id="author-portrait" src="/assets/images/author-portrait.jpg">
                 <h2 class="about-heading-2">CONTACT</h2>
                 <a href="mailto:contactjoshuanolan@icloud.com" class="about-paragraph">Email</a>
                 <a href="https://www.linkedin.com/in/joshua-nolan-38a7a2203?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BE%2FcpA92ZQQ673MGP00cflQ%3D%3D"
