@@ -193,7 +193,7 @@ footer.shadowRoot.innerHTML = `
         display: block;
         max-width: 100%;
         text-align: center;
-        color: white;
+        color: black;
         padding: 10% 10%;
         animation-name: caption-zoom-in;
         animation-duration: 0.25s;

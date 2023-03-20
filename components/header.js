@@ -4,7 +4,7 @@ var fullURL = window.location.pathname.split(/[\s/]+/); // Load the pathname
 var relativeURL = fullURL.slice(-2).join("/");
 console.log(relativeURL); //  Present for testing.
 
-if (relativeURL === "hobbies/index.html") {
+if (relativeURL === "hobbies/index.html" || relativeURL === "books/index.html" || relativeURL === "alfred-cutler-the-backwoods-boy/index.html" || relativeURL === "sneak-peeks/index.html" || relativeURL === "coding/index.html") {
     workIsActivePage = "";
     hobbiesIsActivePage = 'class="active-page"';
     aboutIsActivePage = "";

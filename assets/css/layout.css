@@ -12,30 +12,6 @@
     color: white;
 }
 
-.nav-bar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    min-width: auto;
-    background-color: #b0c4de;
-    border-bottom: solid 4px;
-    border-color: white;
-    color: whitesmoke;
-    box-shadow: 0px 2px 4px black;
-    overflow: hidden;
-    height: auto;
-    animation-name: menuBar;
-    animation-duration: 5s;
-}
-
-.nav-bar .icon {
-    display: none;
-    height: 39px;
-    transition: 1s;
-
-}
-
-
 .sticky {
     position: fixed;
     top: 0;
@@ -47,70 +23,7 @@
     padding-top: 60px;
 }
 
-/* The search box */
-
-#search-box {
-    position: absolute;
-    right: 20px;
-    top: 2px;
-    color: gray;
-    float: right;
-    display: inline;
-    width: 20%;
-    margin-right: 2%;
-    padding: 2px;
-    background-color: whitesmoke;
-    border: solid 1px gray;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-#search-box,
-input:hover {
-    cursor: not-allowed;
-}
-
-input[type=text] {
-    padding: 3px;
-    width: 100%;
-    outline: none;
-
-}
-
-input[type=text]:focus {
-    color: whitesmoke;
-    background-color: rgb(144, 161, 184);
-}
-
-form.search-container {
-    width: 15%;
-}
-
-.search {
-    width: 20px;
-    color: rgb(144, 161, 184);
-}
-
-#quill-pen {
-    /* max-width: 100%;
-    width: 4%; */
-    float: left;
-    width: 35px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    transition: 0.2s;
-    display: block;
-    background-color: lightyellow;
-    border-radius: 50%;
-    box-shadow: 0px 2px 4px black;
-}
-
-#quill-pen:hover {
-    opacity: 0.9;
-    cursor: pointer;
-}
+/* Rows and columns */
 
 .column {
     float: left;
@@ -153,6 +66,7 @@ form.search-container {
 .card-body {
     position: relative;
     color: #5f5f92;
+    text-align: center;
     max-width: 55%;
     max-height: 55%;
     margin-left: auto;
@@ -177,10 +91,6 @@ form.search-container {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0px 4px 8px black;
-}
-
-.card-body {
-    text-align: center;
 }
 
 /* The card overlay */
@@ -404,53 +314,6 @@ a:active {
     background-color: whitesmoke;
 }
 
-.nav-bar a {
-    float: left;
-    display: block;
-    color: whitesmoke;
-    text-align: center;
-    margin-right: 6%;
-    padding: 10px 18px;
-    transition: 0.5s ease-in-out;
-}
-
-.nav-bar a.active-page,
-#menu-overlay a.active-page {
-    text-align: center;
-    background-color: rgb(144, 161, 184);
-    padding: 10px 18px;
-    border-right: solid 1px white;
-    border-left: solid 1px white;
-    box-shadow: 0px 2px 4px black;
-}
-
-.nav-bar a:hover {
-    color: yellow;
-    cursor: pointer;
-}
-
-a.icon:hover {
-    background-color: rgb(144, 161, 184);
-    border-left: solid 1px white;
-    box-shadow: 0px 2px 4px black;
-}
-
-#menu-overlay a {
-    padding: 2% 0;
-    font-size: x-large;
-    text-align: center;
-    color: white;
-    top: 35%;
-    position: relative;
-    display: block;
-    transition: 0.5s ease-in-out;
-
-}
-
-#menu-overlay a:hover {
-    color: yellow;
-}
-
 .moved-right a {
     display: block;
     text-decoration: underline;
@@ -479,17 +342,6 @@ a.icon:hover {
     color: yellow;
 }
 
-#footer-container a {
-    /* color: rgb(95, 95, 146); */
-    color: whitesmoke;
-    transition: 0.5s ease-in-out;
-}
-
-#footer-container a:hover {
-    color: yellow;
-    cursor: pointer;
-}
-
 .centered-list a {
     display: inline;
     width: 100%;
@@ -499,57 +351,8 @@ a.icon:hover {
 
 /* Pop-up screen and menu */
 
-#cookies-screen,
-#privacy-screen,
-#menu-overlay {
-    position: fixed;
-    z-index: 11;
-    left: 0;
-    height: 0%;
-    top: 50%;
-    opacity: 0%;
-    width: 100%;
-    overflow-y: hidden;
-    background-color: #b0c4de;
-    /* background-image: linear-gradient(rgba(95, 95, 146, 0), rgb(98, 115, 139), rgba(95, 95, 146, 0)); */
-    transition: 0.5s;
-}
 
-#cookies-screen .pop-up-screen-caption,
-#privacy-screen .pop-up-screen-caption {
-    font-size: x-large;
-    margin-top: 10%;
-    display: block;
-    max-width: 100%;
-    text-align: center;
-    color: white;
-    padding: 10% 10%;
-    animation-name: caption-zoom-in;
-    animation-duration: 0.25s;
-}
-
-#cookies-screen .close-button,
-#privacy-screen .close-button,
-#menu-overlay .close-button {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: rgb(95, 95, 146);
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-#cookies-screen .close-button:hover,
-#privacy-screen .close-button:hover,
-#menu-overlay .close-button:hover {
-    opacity: 0.9;
-    color: whitesmoke;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Native tag elements */
+/* Arrange attributes for the entire page */
 
 * {
     box-sizing: border-box;
@@ -568,7 +371,7 @@ h2 {
     text-align: center;
 }
 
-/* Stylist classes */
+/* Stylish classes */
 
 .paragraph {
     /* color:rgb(98, 115, 139); */
@@ -620,7 +423,6 @@ h2 {
     font-style: italic;
     text-align: left;
     line-height: 1em;
-    ;
 }
 
 .about-heading-2 {
@@ -628,7 +430,6 @@ h2 {
     font-style: italic;
     text-align: center;
     line-height: 1em;
-    ;
 }
 
 .fancy-heading {
@@ -637,12 +438,12 @@ h2 {
     text-align: center;
     font-size: 2.5em;
     line-height: 1em;
-    ;
 }
 
 #author-portrait {
     display: block;
     width: 60%;
+    background-color: whitesmoke;
     margin-right: auto;
     margin-left: auto;
     border-radius: 50%;
@@ -668,7 +469,7 @@ h2 {
 .heading {
     line-height: 24px;
     text-align: center;
-    color: rgb(144, 161, 184);
+    color: rgb(19, 24, 31);
     padding-top: 15px;
     padding-right: 20%;
     padding-left: 20%;
@@ -703,55 +504,37 @@ h2 {
     width: 100%;
 }
 
+/* Book details */
+
 .book-cover {
-    padding-left: 10px;
-    padding-bottom: 8px;
+    padding: 0px 20px 30px 0px;
     float: left;
 }
 
 .story-summary {
     text-align: justify;
     line-height: 24px;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.story-description {
+    text-align: justify;
+    line-height: 24px;
     padding-bottom: 120px;
 }
 
-/* The footer */
-
-#footer-quill-pen {
-    transition: 0.2s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15%;
-    background-color: rgb(255, 255, 224);
-    border-radius: 50%;
-    box-shadow: 0px 2px 4px black;
+.story-disclaimer {
+    font-style: italic;
 }
 
-#footer-quill-pen:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-
+#ruled {
+    padding: 1em 0em 2em 0em;
+    border-top: 2px solid rgba(0, 0, 0, 50);
 }
 
-#footer-container {
-    text-align: center;
-    width: 100%;
-    color: whitesmoke;
-    height: fit-content;
-    /* background-color: lightsteelblue; */
-    background-color: rgb(133, 153, 179);
-    border-top: solid 4px white;
-    box-shadow: 0px -0px 4px black;
-}
-
-#inner-footer {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    text-align: center;
-    max-width: 100%;
-    color: whitesmoke;
+#apple-books {
+    float: right;
 }
 
 /* Animations */
@@ -898,18 +681,6 @@ h2 {
         padding-top: 5%;
     }
 
-    #quill-pen {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: 8px;
-        margin-right: 0;
-    }
-
-    #footer-quill-pen {
-        width: 20%;
-    }
-
     #changing-display {
         height: 14em;
     }
@@ -922,43 +693,13 @@ h2 {
         display: none;
     }
 
-    .nav-bar a {
-        margin-left: 50px;
-    }
-
-    .nav-bar a:not(:nth-child(2)) {
-        display: none;
-    }
-
-    .nav-bar a.icon {
-        float: right;
-        display: block;
-    }
-
-    .nav-bar.responsive {
-        position: relative;
-    }
-
-    .nav-bar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .nav-bar.responsive a {
-        float: none;
-        display: block;
-        text-align: center;
-        margin: 0px;
-    }
-
     .book-cover {
         padding-left: 10px;
         padding-bottom: 0px;
         float: none;
     }
 
-    .story-summary {
+    .story-description {
         padding-bottom: 40px;
     }
 
@@ -976,7 +717,6 @@ h2 {
 
     .welcome {
         line-height: 0.5em;
-        ;
     }
 
     .moved-right {
@@ -986,12 +726,6 @@ h2 {
     .moved-left {
         padding-right: 0%;
     }
-
-    #cookies-screen .pop-up-screen-caption,
-    #privacy-screen .pop-up-screen-caption {
-        margin-top: 25%;
-    }
-
 }
 
 @media only screen and (min-width: 700px) {
@@ -1011,14 +745,6 @@ h2 {
         max-width: 90%;
     }
 
-    .nav-bar a {
-        margin-right: 4%;
-    }
-
-    #footer-quill-pen {
-        width: 18%;
-    }
-
     .signature-title {
         line-height: 1.5em;
     }
@@ -1029,7 +755,6 @@ h2 {
 
     .welcome {
         line-height: 0.5em;
-        ;
     }
 }
 
@@ -1046,14 +771,6 @@ h2 {
 
     .card-body {
         max-width: 70%;
-    }
-
-    .nav-bar a {
-        margin-right: 6%;
-    }
-
-    #footer-quill-pen {
-        width: 10%;
     }
 
     .signature-title {
