@@ -29,7 +29,6 @@ footer.shadowRoot.innerHTML = `
     .tooltip .tooltiptext {
         opacity: 0;
         height: 0;
-        transition: 0.5s;
         width: 120px;
         background-color: rgb(144, 161, 184);
         color: whitesmoke;
@@ -40,6 +39,7 @@ footer.shadowRoot.innerHTML = `
         margin-left: -60px;
         border-radius: 10px;
         position: absolute;
+        transition: 0.5s;
         z-index: 2;
     }
     
@@ -55,7 +55,6 @@ footer.shadowRoot.innerHTML = `
     
     .tooltip-below .tooltiptext-below {
         opacity: 0;
-        transition: 0.5s;
         width: 200px;
         background-color: rgb(144, 161, 184);
         color: whitesmoke;
@@ -66,6 +65,7 @@ footer.shadowRoot.innerHTML = `
         margin-left: -100px;
         border-radius: 10px;
         position: absolute;
+        transition: 0.5s;
         z-index: 1;
     }
     
@@ -89,18 +89,18 @@ footer.shadowRoot.innerHTML = `
         border-radius: 10%;
         padding: 5px 0;
         opacity: 0;
+        transition: 0.5s;
     
         /* Position the tooltip */
         position: absolute;
         z-index: 0;
         top: -0px;
         right: 50%;
-        transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        transform: rotate(45deg);
+        transform: translate(-50%, -50%);
         -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
     
-        transition: 0.5s;
     }
     
     .tooltip-right:hover .tooltiptext-right {
@@ -129,15 +129,15 @@ footer.shadowRoot.innerHTML = `
         z-index: 2;
         top: -60px;
         right: 50%;
-        transform: rotate(-135deg);
         -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
     }
     
     .tooltip-left:hover .tooltiptext-left {
         visibility: visible;
     }
 
-    #quill-pen {
+    #logo {
         display: block;
         width: 15%;
         margin-left: auto;
@@ -145,23 +145,15 @@ footer.shadowRoot.innerHTML = `
         border-radius: 50%;
         background-color: rgb(255, 255, 224);
         border: solid 4px rgb(61, 71, 85);
-    }
-    /*
-    #quill-pen {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 15%;
-        background-color: rgb(255, 255, 224);
-        border-radius: 50%;
-        box-shadow: 0px 2px 4px black;
         transition: 0.5s;
     }
     
-    #quill-pen:hover {
+    #logo:hover {
         opacity: 0.7;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
         transform: scale(1.05);
-    } */
+    }
 
     #inner-footer {
         margin-left: auto;
@@ -236,7 +228,7 @@ footer.shadowRoot.innerHTML = `
             line-height: 0.75em;
         }
 
-        #quill-pen {
+        #logo {
             width: 20%;
         }
 
@@ -262,7 +254,7 @@ footer.shadowRoot.innerHTML = `
     }   
 
     @media only screen and (min-width: 700px) {
-        #quill-pen {
+        #logo {
             width: 18%;
         }
 
@@ -270,7 +262,7 @@ footer.shadowRoot.innerHTML = `
     }
 
     @media only screen and (min-width: 1000px) {
-        #quill-pen {
+        #logo {
             width: 10%;
         }   
     }
@@ -279,8 +271,8 @@ footer.shadowRoot.innerHTML = `
         <br>
         <div class="tooltip">
             <span class="tooltiptext">Return to top.</span>
-            <a href="#changing-display">
-                <img id="quill-pen" src="/assets/images/site-logo.png" alt="The initials of the author - J. N.">
+            <a href="#nav">
+                <img id="logo" src="/assets/images/site-logo.png" alt="The initials of the author - J. N.">
             </a>
         </div>
         <br>

@@ -71,28 +71,28 @@ const projectsList = [{
     overlayText: "View the contents of Project A.",
     cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
     imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
-    linkURL: "./projects/project-a.html",
+    linkURL: "/pages/projects/project-a.html",
 },
 {
     title: "Project B",
     overlayText: "View the contents of Project B.",
     cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
     imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
-    linkURL: "./projects/project-b.html",
+    linkURL: "/pages/projects/project-b.html",
 },
 {
     title: "Project C",
     overlayText: "View the contents of Project C.",
     cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
     imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
-    linkURL: "./projects/project-c.html",
+    linkURL: "/pages/projects/project-c.html",
 },
 {
     title: "Project D",
     overlayText: "View the contents of Project D.",
     cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
     imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
-    linkURL: "./projects/project-d.html",
+    linkURL: "/pages/projects/project-d.html",
 }];
 
 // Hobbies page
@@ -223,7 +223,7 @@ if (localPathname === "/index.html") {
                     <h3 class="signature">I am Joshua Nolan</h3>
                     <h5 class="caption-2">USER EXPERIENCE DESIGNER</h5>
                 </div>
-                <img id="author-portrait" src="/assets/images/author-portrait.jpg">
+                <img id="author-portrait" src="/assets/images/author-portrait.jpg" alt="Joshua Nolan smiling delightedly.">
                 <h2 class="about-heading-2">CONTACT</h2>
                 <a href="mailto:contactjoshuanolan@icloud.com" class="about-paragraph">Email</a>
                 <a href="https://www.linkedin.com/in/joshua-nolan-38a7a2203?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BE%2FcpA92ZQQ673MGP00cflQ%3D%3D"

@@ -121,7 +121,7 @@ nav.shadowRoot.innerHTML = `
         #menu-overlay a.active-page {
             background-color: white;
             padding: 8px 18px;
-            border: 2px solid black;
+            box-shadow: 0px 2px 4px black;
         }
 
         #menu-overlay a {
@@ -221,12 +221,15 @@ function closeMenu() {
 // Enable the sticky menu on scroll.
 window.onscroll = function () { stickMenu() };
 var navBar = nav.shadowRoot.getElementById("nav");
+var externalNav = document.getElementById("nav");
 var sticky = navBar.offsetTop;
 
 function stickMenu() {
     if (window.pageYOffset >= sticky) {
         navBar.classList.add("sticky");
+        externalNav.classList.add(sticky);
     } else {
         navBar.classList.remove("sticky");
+        externalNav.classList.remove("sticky");
     }
 };
