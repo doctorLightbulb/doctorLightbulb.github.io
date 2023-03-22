@@ -1,6 +1,79 @@
 // cards.js
 
 // Landing page
+const menuList = [{
+    title: "Articles",
+    overlayText: "Explore the articles I have written... so far.",
+    cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    linkURL: "/pages/articles/index.html",
+},
+{
+    title: "Projects",
+    overlayText: "Explore the projects I have — and am — still creating.",
+    cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    linkURL: "/pages/projects/index.html",
+},
+{
+    title: "Badges",
+    overlayText: "View my certificates of completion and other achievements.",
+    cardImage: "https://www.kasandbox.org/programming-images/landscapes/lake.png",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    linkURL: "/pages/achievements/index.html",
+}];
+
+// Achievements page
+const achievementsList = [{
+    title: "Fundamentals of Accounting",
+    type: "Specialization",
+    summary: "Summary of the learning objectives and what I did. Fit it all onto three lines so that the cards can all occupy the same space.",
+    grade: "100%",
+    banner: "first-place",
+    cardImage: "/assets/images/cards/blue-ribbon.svg",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    institution: "GIES University",
+    host: "Coursera",
+    linkURL: "./projects/project-a.html",
+},
+{
+    title: "Bookkeeping",
+    type: "Certificate Program",
+    summary: "Summary of the learning objectives and what I did. Fit it all onto three lines so that the cards can all occupy the same space.",
+    grade: "100%",
+    banner: "first-place",
+    cardImage: "/assets/images/cards/blue-ribbon.svg",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    institution: "GIES University",
+    host: "Coursera",
+    linkURL: "./projects/project-a.html",
+},
+{
+    title: "Creative Writing",
+    type: "Specialization",
+    summary: "Summary of the learning objectives and what I did. Fit it all onto three lines so that the cards can all occupy the same space.",
+    grade: "75%",
+    banner: "third-place",
+    cardImage: "/assets/images/cards/blue-ribbon.svg",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    institution: "GIES University",
+    host: "Coursera",
+    linkURL: "./projects/project-a.html",
+},
+{
+    title: "Fundamentals of Accounting",
+    type: "Specialization",
+    summary: "Summary of the learning objectives and what I did. Fit it all onto three lines so that the cards can all occupy the same space.",
+    grade: "90%",
+    banner: "second-place",
+    cardImage: "/assets/images/cards/red-ribbon.svg",
+    imageAltText: "A beautiful landscape from Khan Academy's sandbox.",
+    institution: "GIES University",
+    host: "Coursera",
+    linkURL: "./projects/project-a.html",
+}];
+
+// Projects page
 const projectsList = [{
     title: "Project A",
     overlayText: "View the contents of Project A.",
@@ -97,31 +170,21 @@ console.log(localPathname); //  Present for testing.
 const container = document.getElementById("row");
 
 if (localPathname === "/index.html") {
-    projectsList.forEach((item) => {
-        // Create card element:
-        const card = document.createElement("div");
-        card.classList = "card-body";
-
-        // Define card content:
-        const content = `
-            <div class="quad-column">
-                <div class="card-body" data-parent="#row">
-                    <a href="${item.linkURL}">
-                        <div class="card-overlay">
-                            <p class="card-overlay-text">${item.overlayText}</p>
-                        </div>
-                    </a>
-                    <img class="centered" src="${item.cardImage}" alt="${item.imageAltText}">
-                    <h2>${item.title}</h2>
-                </div>
-            </div>
-        `;
-        // Append each created element to the container:
-        container.innerHTML += content;
-    })
-
+    var listedItems = menuList;
 } else if (localPathname === "hobbies/index.html") {
-    hobbiesList.forEach((item) => {
+    var listedItems = hobbiesList;
+} else if (localPathname === "coding/index.html") {
+    var listedItems = codingList;
+} else if (localPathname === "projects/index.html") {
+    var listedItems = projectsList;
+}
+
+if (localPathname === "/index.html" ||
+    localPathname === "projects/index.html" ||
+    localPathname === "hobbies/index.html" ||
+    localPathname === "coding/index.html") {
+
+    listedItems.forEach((item) => {
         // Create card element:
         const card = document.createElement("div");
         card.classList = "card-body";
@@ -142,7 +205,69 @@ if (localPathname === "/index.html") {
         `;
         // Append each created element to the container:
         container.innerHTML += content;
-    })
+    });
+
+} else if (localPathname === "books/index.html") {
+    booksList.forEach((item) => {
+        // Create card element:
+        const card = document.createElement("div");
+        card.classList = "card-body";
+
+        // Define card content:
+        const content = `
+        <div class="column">
+            <div class="card-body">
+                <a href=${item.linkURL}>
+                    <img class="centered" src=${item.cardImage}
+                        alt=${item.imageAltText}>
+                </a>
+                <br>
+            </div>
+        </div>
+        `;
+        // Append each created element to the container:
+        container.innerHTML += content;
+    });
+
+} else if (localPathname === "achievements/index.html") {
+    achievementsList.forEach((item) => {
+        // Create card element:
+        const card = document.createElement("div");
+        card.classList = "card-body";
+
+        // Define card content:
+        const content = `
+                <div class="quad-column">
+                    <div class="badge-card-body" data-parent="#row">
+                        <div class="card-header">
+                            <h3>${item.title}</h3>
+                            <h4><em>${item.type}</em></h4>
+                        </div>
+                        <div class="card-status">
+                            <div class="${item.banner}">
+                                <img class="ribbon" src="${item.cardImage}" alt="${item.imageAltText}">
+                            </div>
+                        </div>
+                        <p class="grade">Grade: ${item.grade}</p>
+                        <div class="card-body2">
+                            <a href="${item.linkURL}">
+                                <div class="card-overlay">
+                                    <p class="card-overlay-text">Click for more details.</p>
+                                </div>
+                            </a>
+                            <p>${item.summary}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>Authorized by: ${item.institution}</p>
+                            <p>Hosted by: ${item.host}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        // Append each created element to the container:
+        container.innerHTML += content;
+    });
+
 } else if (localPathname === "about/index.html") {
     hobbiesList.forEach((item) => {
         // Create card element:
@@ -195,51 +320,21 @@ if (localPathname === "/index.html") {
         `;
         // Append each created element to the container:
         container.innerHTML = content;
-    })
-} else if (localPathname === "books/index.html") {
-    booksList.forEach((item) => {
-        // Create card element:
-        const card = document.createElement("div");
-        card.classList = "card-body";
-
-        // Define card content:
-        const content = `
-        <div class="column">
-            <div class="card-body">
-                <a href=${item.linkURL}>
-                    <img class="centered" src=${item.cardImage}
-                        alt=${item.imageAltText}>
-                </a>
-                <br>
-            </div>
-        </div>
-        `;
-        // Append each created element to the container:
-        container.innerHTML += content;
-    });
-} else if (localPathname === "coding/index.html") {
-    codingList.forEach((item) => {
-        // Create card element:
-        const card = document.createElement("div");
-        card.classList = "card-body";
-
-        // Define card content:
-        const content = `
-            <div class="quad-column">
-                <div class="card-body">
-                    <a href="${item.linkURL}" target="_blank">
-                        <div class="card-overlay">
-                            <p class="card-overlay-text">${item.overlayText}</p>
-                        </div>
-                    </a>
-                    <img class="centered" src="${item.cardImage}"
-                        alt="${item.imageAltText}" style="border-radius: 50%;">
-                    <h5>${item.title}</h5>
-                </div>
-            </div>
-        `;
-        // Append each created element to the container:
-        container.innerHTML += content;
     });
 }
 
+// Attempt to eleviate the sudden jump of the page when the navigation bar becomes fixed to the top of the page.
+window.onscroll = function () { addSpace(); };
+var externalNav = document.getElementById("nav");
+var externalSticky = externalNav.offsetTop;
+var textContainer = document.getElementById("text-container");
+console.log(externalSticky);
+
+
+function addSpace() {
+    if (window.pageYOffset >= externalSticky) {
+        textContainer.style.paddingTop = "120px";
+    } else {
+        textContainer.style.paddingTop = "0px";
+    }
+};

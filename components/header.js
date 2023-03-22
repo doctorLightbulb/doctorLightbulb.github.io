@@ -219,17 +219,14 @@ function closeMenu() {
 }
 
 // Enable the sticky menu on scroll.
-window.onscroll = function () { stickMenu() };
+window.onscroll = function () { stickMenu(); };
 var navBar = nav.shadowRoot.getElementById("nav");
-var externalNav = document.getElementById("nav");
 var sticky = navBar.offsetTop;
 
 function stickMenu() {
     if (window.pageYOffset >= sticky) {
         navBar.classList.add("sticky");
-        externalNav.classList.add(sticky);
     } else {
         navBar.classList.remove("sticky");
-        externalNav.classList.remove("sticky");
     }
 };
