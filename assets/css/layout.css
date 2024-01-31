@@ -1,5 +1,15 @@
 /* This file contains everything to do with styling the webiste. */
 
+:root {
+    /* Navigation */
+    --text-color: #0c0c53;
+    --text-highlight-color: #ffffff;
+    --inactive-hover-color: #8599b3;
+    --background-color: #b0c4de;
+    --border-color: #b0c4de;
+    --shadow-color: #000000;
+}
+
 #changing-display {
     background-color: darkslategray;
     background: url("https://www.kasandbox.org/programming-images/landscapes/lake.png");
@@ -9,19 +19,205 @@
     background-position: center;
     background-blend-mode: lighten;
     height: 15em;
-    color: white;
+    color: var(--text-highlight-color);
 }
 
-.sticky {
-    position: fixed;
+/* New nav */
+#nav {
+    position: sticky;
     top: 0;
+    z-index: 10;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: auto;
     width: 100%;
-    height: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 4px var(--shadow-color);
 }
 
-/* .sticky+#text-container {
-    padding-top: 60px;
+#nav a,
+#menu-overlay a {
+    text-decoration: none;
+    transition: 1s;
+}
+
+#nav .middle-item {
+    margin: 0px 25px;
+    padding: 10px 20px;
+}
+
+.active-page {
+    color: var(--text-color);
+    background-color: var(--text-highlight-color);
+}
+
+.active-page:hover {
+    background-color: lightgray;
+}
+
+.inactive-page {
+    color: var(--text-color);
+}
+
+.inactive-page:hover {
+    color: var(--text-highlight-color);
+    background-color: var(--inactive-hover-color);
+}
+
+.nav-right {
+    position: absolute;
+    right: 0;
+}
+
+.nav-left {
+    position: absolute;
+    left: 0;
+}
+
+#logo {
+    position: absolute;
+    top: 1px;
+    width: 35px;
+    background-color: var(--text-highlight-color);
+    box-shadow: 0px 2px 4px var(--shadow-color);
+    margin: 0px 10px;
+    padding: 0px 0px;
+    transition: 1s;
+    border-radius: 50%;
+}
+
+#logo:hover {
+    opacity: 70%;
+}
+
+#menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#menu-icon:hover {
+    color: var(--text-highlight-color);
+    background-color: var(--inactive-hover-color);
+}
+
+.bar {
+    width: 35px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0px 5px 0px;
+    transition: 1s;
+}
+
+/* Old nav */
+/* #nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: #b0c4de;
+    font-weight: 700;
+    font-family: serif;
+    border-bottom: 4px solid white;
+    box-shadow: 0px 2px 4px black;
+}
+
+#nav a {
+    color: black;
+    margin: 0 25px;
+    padding: 10px 25px;
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+
+#nav a:hover {
+    color: yellow;
 } */
+
+#nav a#icon {
+    display: none;
+    transition: 0.5s;
+}
+
+/* #logo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 35px;
+    transition: 1s;
+    background-color: lightyellow;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+    margin: 0 10px;
+}
+
+#logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+*/
+.contact {
+    position: absolute;
+    right: 0px;
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+
+#menu-overlay {
+    position: fixed;
+    opacity: 0%;
+    z-index: 12;
+    left: 0;
+    height: 0%;
+    top: 50%;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #b0c4de;
+    transition: 0.5s;
+}
+
+#nav a.active-page,
+#menu-overlay a.active-page {
+    background-color: var(--text-highlight-color);
+}
+
+#menu-overlay a {
+    position: relative;
+    top: 35%;
+    display: block;
+    font-size: x-large;
+    text-align: center;
+    padding: 2% 0;
+    color: var(--text-color);
+    transition: 0.5s ease-in-out;
+
+}
+
+#menu-overlay a:hover {
+    color: var(--text-highlight-color);
+}
+
+#menu-overlay #close-menu {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#menu-overlay #close-menu:hover {
+    opacity: 0.9;
+    color: var(--text-highlight-color);
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /* Rows and columns */
 
@@ -81,7 +277,7 @@
     padding-bottom: 10px;
     padding-top: 45px;
     box-shadow: 0px 2px 4px black;
-    z-index: 1;
+    /* z-index: 1; */
     transition: 0.2s;
     animation-name: slide-in-from-bottom;
     animation-duration: 1s;
@@ -402,13 +598,13 @@
 
 /* a-tag elements */
 
-a {
+/* a {
     text-decoration: none;
 }
 
 a:active {
     background-color: whitesmoke;
-}
+} */
 
 .moved-right a {
     display: block;
@@ -662,16 +858,6 @@ h2 {
 
 /* Animations */
 
-/* The menu-bar */
-@keyframes menuBar {
-    0% {
-        height: 0;
-    }
-
-    100% {
-        height: 100%
-    }
-}
 
 /* The top display */
 @keyframes display-fade-in {
@@ -773,6 +959,31 @@ h2 {
 
 /* Screen sizes */
 @media only screen and (max-width: 700px) {
+    #nav a:not(:nth-of-type(1)):not(:nth-last-of-type(1)) {
+        display: none;
+    }
+
+    #nav {
+        /* The navigation bar's background disappears without this */
+        height: 40px;
+    }
+
+    #nav a#icon {
+        display: block;
+        position: absolute;
+        right: 0px;
+        margin: 0 10px;
+        padding: 10px 20px;
+    }
+
+    #nav #menu-icon {
+        display: block;
+        position: absolute;
+        right: 0px;
+        padding: 5px 20px;
+        margin: 0 10px;
+    }
+
     .text-container {
         padding: 0;
     }
